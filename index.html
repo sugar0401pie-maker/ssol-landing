@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>쏠 웰니스 하우스</title>
+<meta name="description" content="가벼운 웰니스 테스트부터 AI 상담 쏘웰라, 전문 상담가와의 1:1 세션까지 — 지금 마음에 맞는 깊이로 시작하세요.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#033667; --navy-deep:#022447; --sky:#A9C4D9; --sky-soft:#E3EDF4;
+  --page:#E9EFF4; --ground:#FFFFFF; --ink:#0F1E2C; --muted:#4E5D6B; --line:#D5E1EA; --card:#FFFFFF;
+  --on-navy:#F2F6FA; --on-navy-muted:#B3C6D6;
+  --serif:'Gowun Batang','Nanum Myeongjo',serif;
+  --sans:'Noto Sans KR',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap:balance;margin:0}
+
+.app{max-width:430px;margin:0 auto;background:var(--ground);box-shadow:0 0 0 1px var(--line),0 20px 60px rgba(3,54,103,.12);position:relative}
+@media (min-width:600px){.app{margin-block:24px;border-radius:28px;overflow:hidden}}
+.pad{padding-inline:20px}
+
+.eyebrow{font-size:11.5px;letter-spacing:1.8px;font-weight:700;text-transform:uppercase}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:52px;border-radius:14px;font-weight:700;font-size:15.5px;text-decoration:none;border:1.5px solid transparent}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.btn.solid{background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy)}
+.btn.ghost-l{border-color:rgba(255,255,255,.55);color:#fff}
+.stack{display:flex;flex-direction:column;gap:10px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;justify-content:space-between;height:62px;padding-inline:18px}
+.logo{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.logo img{width:34px}
+.login{font-size:13px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:5px 12px;border-radius:99px}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,#0A3D6E 0%,var(--navy) 60%,#0B4A80 100%);color:#fff;overflow:hidden}
+.hero-in{position:relative;z-index:2;padding:108px 20px 96px;display:flex;flex-direction:column;gap:18px}
+.hero .eyebrow{color:var(--sky)}
+#headline{font-size:31px;line-height:1.36;min-height:2.72em;transition:opacity .4s}
+.lead{margin:0;font-size:15px;color:var(--on-navy-muted)}
+.lead b{color:#fff;font-weight:500}
+.hero .sub{font-size:13.5px;color:var(--on-navy-muted);text-align:center}
+.hero .sub a{color:#fff;text-underline-offset:4px}
+.hero-mark{position:absolute;right:-70px;top:70px;width:300px;opacity:.07;z-index:1;pointer-events:none}
+.waves{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:64px;z-index:1;display:block}
+
+/* ladder */
+.ladder{padding-block:36px 8px}
+.ladder h2{font-size:25px;line-height:1.4}
+.ladder p{margin:10px 0 18px;color:var(--muted);font-size:14.5px}
+.depth{display:flex;flex-direction:column;gap:8px}
+.depth a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:13px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+.depth .n{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:0 0 auto}
+.depth .d1 .n{background:var(--sky-soft);color:var(--navy)}
+.depth .d2 .n{background:var(--sky);color:var(--navy)}
+.depth .d3 .n{background:var(--navy);color:#fff}
+.depth b{display:block;font-size:15px;line-height:1.4}
+.depth small{display:block;font-size:12.5px;color:var(--muted)}
+
+/* steps */
+.step{padding-block:44px}
+.step .eyebrow{color:var(--navy)}
+:root[data-theme="dark"] .s1 .eyebrow,:root[data-theme="dark"] .s2 .eyebrow{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .s1 .eyebrow,:root:not([data-theme="light"]) .s2 .eyebrow{color:var(--sky)}}
+.step h2{font-size:26px;line-height:1.4;margin:8px 0 12px}
+.step p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+.facts{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:8px}
+.facts li{display:flex;gap:9px;align-items:flex-start;font-size:14.5px}
+.facts svg{flex:0 0 auto;margin-top:5px}
+.s2{background:var(--sky-soft)}
+.s3{background:var(--navy);color:var(--on-navy)}
+.s3 .eyebrow{color:var(--sky)}
+.s3 p{color:var(--on-navy-muted)}
+
+/* quiz */
+.quiz{display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:#FBE9E6;box-shadow:0 14px 36px rgba(3,54,103,.14);margin-bottom:14px}
+.quiz img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 42%}
+.quiz .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;background:#fff;color:#0F1E2C}
+.quiz .bar b{font-size:14.5px}
+.count{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--navy);font-weight:500;white-space:nowrap}
+.count i{width:7px;height:7px;border-radius:50%;background:#2E8B57}
+.soon{margin-top:18px;border:1.5px dashed var(--line);border-radius:18px;padding:16px;display:flex;gap:14px;align-items:center;background:var(--card)}
+.soon .ic{width:52px;height:52px;border-radius:14px;background:var(--sky-soft);display:flex;align-items:center;justify-content:center;flex:0 0 auto;color:var(--navy)}
+:root[data-theme="dark"] .soon .ic{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .soon .ic{color:var(--sky)}}
+.soon b{display:block;font-size:14.5px;line-height:1.45}
+.soon small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--navy);color:#fff;margin-bottom:4px}
+
+/* chat */
+.chat{border-radius:22px;background:#fff;box-shadow:0 14px 36px rgba(3,54,103,.14);overflow:hidden;color:#0F1E2C;border:1px solid #D5E1EA;margin-bottom:20px}
+.chat .h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #DDE6EE;font-size:14px;font-weight:500}
+.chat .h span{font-size:12px;border:1px solid #D5E1EA;border-radius:99px;padding:3px 9px}
+.chat .b{padding:14px;display:flex;flex-direction:column;gap:9px;font-size:13.5px;line-height:1.6}
+.bub{max-width:85%;padding:9px 13px;border-radius:15px}
+.ai{background:#E6EDF5;align-self:flex-start}
+.me{background:var(--navy);color:#fff;align-self:flex-end}
+.chat .f{display:flex;gap:5px;padding:9px 10px 12px;border-top:1px solid #DDE6EE;align-items:center}
+.chat .f .in{flex:1;min-width:0;height:38px;border-radius:13px;border:1px solid #D5E1EA;background:#F4F8FB;font-size:12.5px;color:#8395A5;display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.chat .f .rb{height:38px;border-radius:13px;border:1px solid #D5E1EA;font-size:12px;padding:0 9px;display:flex;align-items:center;font-weight:500;white-space:nowrap}
+.chat .f .sb{height:38px;border-radius:13px;background:var(--navy);color:#fff;font-size:12px;padding:0 11px;display:flex;align-items:center;font-weight:500;white-space:nowrap}
+
+/* experts */
+.evidence{margin:4px 0 18px;padding:15px 16px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.evidence p{margin:0;color:#fff;font-size:14px;line-height:1.7}
+.evidence cite{display:block;margin-top:6px;font-style:normal;font-size:11.5px;color:var(--on-navy-muted)}
+.offer{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+.offer span{font-size:12.5px;padding:6px 11px;border-radius:99px;background:rgba(169,196,217,.16);color:#fff}
+.themes-t{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--sky);margin:0 0 4px}
+.themes{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.themes a{display:flex;justify-content:space-between;align-items:center;gap:4px 10px;padding:15px 2px;border-bottom:1px solid rgba(255,255,255,.18);text-decoration:none;color:#fff;font-family:var(--serif);font-size:18.5px;font-weight:700}
+.themes a small{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--on-navy-muted)}
+.more{display:block;text-align:center;font-size:13.5px;color:#fff;margin-top:14px;text-underline-offset:4px}
+
+/* closing & footer */
+.close{background:var(--navy-deep);color:#fff;text-align:center;padding:60px 20px 64px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.close img{width:96px}
+.close h2{font-size:25px;font-style:italic;font-weight:400;letter-spacing:0;line-height:1.5}
+.close p{margin:0 0 6px;color:var(--on-navy-muted);font-size:14.5px}
+.close .stack{width:100%}
+footer{padding:28px 20px 36px;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.8;display:flex;flex-direction:column;align-items:center;gap:2px}
+footer .by{color:var(--navy);text-decoration:underline;text-underline-offset:3px;font-size:13px}
+:root[data-theme="dark"] footer .by{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .by{color:var(--sky)}}
+footer .links{margin:4px 0;display:flex;gap:6px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+footer .links a{text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="app" id="app">
+  <header class="top">
+    <a class="logo" href="#top"><img src="images/mark-cream.png" alt="">쏠 웰니스 하우스</a>
+    <a class="login" href="https://app.ssolwellnesshouse.com">로그인</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-mark" src="images/mark-cream.png" alt="">
+      <div class="hero-in">
+        <span class="eyebrow">Ssol Wellness House</span>
+        <h1 id="headline">이유 없이 '그냥'<br>힘드신가요?</h1>
+        <p class="lead">가벼운 테스트부터 AI 상담 <b>쏘웰라</b>,<br>전문 상담가와의 세션까지.<br>지금 마음에 맞는 깊이로 시작하세요.</p>
+        <div class="stack">
+          <a class="btn light" href="https://quiz.ssolwellnesshouse.com?utm_source=www">3분 테스트 해보기</a>
+          <a class="btn ghost-l" href="https://app.ssolwellnesshouse.com?utm_source=www">쏘웰라와 대화하기</a>
+        </div>
+        <div class="sub">전문 상담가를 바로 만나고 싶다면 <a class="inline" href="https://www.ssolwellness.com/reserve">상담 예약하기 →</a></div>
+      </div>
+      <svg class="waves" viewBox="0 0 430 64" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 34 C 60 14 120 14 180 30 S 300 52 360 34 S 410 20 430 26 L430 64 L0 64 Z" fill="#A9C4D9" opacity=".35"/>
+        <path d="M0 46 C 70 30 130 32 190 44 S 310 62 370 46 S 415 36 430 40 L430 64 L0 64 Z" fill="var(--ground)"/>
+      </svg>
+    </section>
+
+    <section class="ladder pad">
+      <h2>물가에서 시작해<br>깊은 바다까지</h2>
+      <p>가볍게 나를 알아보고, 필요할 때 이야기하고, 더 깊이 들여다보고 싶을 때 전문가를 만나세요.</p>
+      <div class="depth">
+        <a class="d1" href="#test"><span class="n">1</span><span><b>나를 알아보기</b><small>웰니스 테스트 · 3분</small></span></a>
+        <a class="d2" href="#chat"><span class="n">2</span><span><b>언제든 이야기하기</b><small>AI 웰니스 상담 쏘웰라</small></span></a>
+        <a class="d3" href="#expert"><span class="n">3</span><span><b>전문가와 깊이 있게</b><small>1:1 멘탈 웰니스 세션</small></span></a>
+      </div>
+    </section>
+
+    <!-- STEP 1 -->
+    <section class="step s1 pad" id="test">
+      <span class="eyebrow">Step 1 · 나를 알아보기</span>
+      <h2>디저트로 알아보는<br>나의 웰니스 유형</h2>
+      <p>티파티에 초대받았는데, 알고 보니 내가 디저트라면? 가벼운 질문에 답하다 보면 평소 잘 보이지 않던 나의 마음 습관이 캐릭터로 나타나요.</p>
+      <a class="quiz" href="https://quiz.ssolwellnesshouse.com?utm_source=www">
+        <img src="https://quiz.ssolwellnesshouse.com/images/hero/hero-intro.jpg" alt="티파티에 초대받은 내가 사실은 디저트?! 테스트 대표 이미지">
+        <span class="bar"><b>티파티에 초대받은 내가 사실은 디저트?!</b></span>
+      </a>
+      <div class="count" style="justify-content:center;margin-bottom:16px"><i></i>벌써 1,524명이 참여했어요</div>
+      <ul class="facts">
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>회원가입 없이 바로 시작</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>전문 상담가가 설계한 문항</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>결과를 바탕으로 쏘웰라와 상담할 수 있어요</li>
+      </ul>
+      <a class="btn solid" href="https://quiz.ssolwellnesshouse.com?utm_source=www">테스트 하기</a>
+
+      <div class="soon" aria-label="준비 중인 테스트">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+        <div><span class="badge">준비 중</span><b>새로운 웰니스 테스트를 준비하고 있어요</b><small>곧 다른 테스트로 찾아올게요.</small></div>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step s2 pad" id="chat">
+      <span class="eyebrow">Step 2 · 언제든 이야기하기</span>
+      <h2>말하기 어려운 이야기,<br>쏘웰라에게 먼저</h2>
+      <p>전문 상담가가 개발한 AI 웰니스 상담 쏘웰라는 판단 없이 끝까지 들어요. 혼자 삼키기엔 무거운 고민이라면 여기서 시작해도 괜찮아요.</p>
+      <div class="chat" aria-label="쏘웰라 대화 화면 미리보기">
+        <div class="h">AI 채팅<span>새 대화</span></div>
+        <div class="b">
+          <div class="bub ai">안녕하세요, 쏠 웰니스 하우스예요. 요즘 마음에 머무는 이야기가 있다면 편하게 들려주시기 바랍니다.</div>
+          <div class="bub me">요즘 이유 없이 무기력해요.</div>
+          <div class="bub ai">이야기해 주셔서 고마워요. 하루 중 언제 그 느낌이 가장 크게 오는지 조금 더 들려주실래요?</div>
+        </div>
+        <div class="f"><div class="in">마음에 있는 이야기를 적어주세요</div><div class="rb">추천 질문</div><div class="sb">보내기</div></div>
+      </div>
+      <ul class="facts">
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>웰니스 테스트 결과를 바탕으로 한 맞춤 답변</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>매일 나에게 맞는 작은 실천 제안</li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>가입 후 7일 무료</li>
+      </ul>
+      <a class="btn solid" href="https://app.ssolwellnesshouse.com?utm_source=www">지금 대화를 시작하세요</a>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step s3 pad" id="expert">
+      <span class="eyebrow">Step 3 · 전문가와 깊이 있게</span>
+      <h2 style="color:#fff">전문 웰니스 상담가와의<br>1:1 멘탈 웰니스 세션</h2>
+      <p>웰니스 세션의 목표는 과학적, 철학적 지혜로 '충만한 삶'에 닿는 것이에요. 다섯 가지 테마 중 지금 내게 필요한 것을 골라 시작하세요.</p>
+      <div class="evidence">
+        <p>상위 25% 전문가는 2세션 만에, 하위 25% 전문가가 10세션에 도달하는 효과 크기를 달성했습니다.</p>
+        <cite>Mahon, Minami &amp; Brown (2025)</cite>
+      </div>
+      <div class="offer">
+        <span>신규고객 면담 20분 · 10,000원</span>
+        <span>화상 (Google Meet)</span>
+        <span>센터 · 공덕, 상수</span>
+      </div>
+      <p class="themes-t">테마 안내</p>
+      <ul class="themes">
+        <li><a href="https://www.ssolwellness.com/perfectionism">완벽 대신 탁월하기 <small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/happiness">행복을 훈련하기 <small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/anxiety">불안 다스리기 <small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/purpose">삶의 방향성 찾기 <small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/romance">연애 패턴 바꾸기 <small>→</small></a></li>
+      </ul>
+      <a class="btn light" href="https://www.ssolwellness.com/reserve">상담 예약하기</a>
+      <a class="more" href="https://www.ssolwellness.com/wellnessintro">멘탈 웰니스 세션이 궁금하다면</a>
+    </section>
+
+    <section class="close">
+      <img src="images/mark-cream.png" alt="">
+      <h2>SSOL —<br>삶의 파도를 유영하는 힘</h2>
+      <p>오늘은 어디서부터 시작해 볼까요?</p>
+      <div class="stack">
+        <a class="btn light" href="https://quiz.ssolwellnesshouse.com?utm_source=www">3분 테스트 해보기</a>
+        <a class="btn ghost-l" href="https://app.ssolwellnesshouse.com?utm_source=www">쏘웰라와 대화하기</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="by" href="https://www.ssolwellness.com">by 쏠 웰니스 하우스</a>
+    <div class="links"><a href="https://quiz.ssolwellnesshouse.com/legal#privacy">개인정보처리방침</a><span>·</span><a href="https://quiz.ssolwellnesshouse.com/legal#terms">이용약관</a></div>
+    <div>쏠 웰니스 하우스 · 대표 김준석 · 사업자등록번호 572-07-03549</div>
+    <div>서울시 마포구 독막로 100 4층 408호 · 연락처 010-2835-2263</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var H=["딱 터놓고 말 할<br>누군가가 필요하세요?","말하기 어려운<br>고민이 있으신가요?","해결책을 찾지 못해<br>힘드신가요?","이유 없이 '그냥'<br>힘드신가요?","삶이 버겁고<br>지치셨나요?","불안해서 잠못이루는<br>날이 있으신가요?","이유없는 불안때문에<br>힘드신가요?","정리가 안되고 정신없는<br>나날이 계속되나요?","내가 뭘 하고 있나<br>싶은 생각이 드시나요?"];
+  var last=-1; try{ last=+(sessionStorage.getItem('ssol-h')||-1); }catch(e){}
+  var i; do{ i=Math.floor(Math.random()*H.length); }while(i===last && H.length>1);
+  try{ sessionStorage.setItem('ssol-h',i); }catch(e){}
+  document.getElementById('headline').innerHTML=H[i];
+})();
+</script>
+
+</body>
+</html>
