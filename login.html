@@ -138,19 +138,11 @@ form.addEventListener("submit", async (e) => {
   window.location.href = AFTER_LOGIN_URL;
 });
 
-// 2026-10-10: 쏘웰라 앱(app.ssolwellnesshouse.com, lib/supabase/authClient.ts)의 카카오 로그인과 똑같이 맞춤.
-// - 돌아올 주소: 앱 주소(Supabase 허용 목록에 이미 등록돼 실제 로그인이 되는 주소). 예전에는 이 페이지
-//   (/login.html)로 돌아오게 했는데, 허용 목록에 없으면 엉뚱한 곳으로 가서 로그인이 끝나지 않았음.
-//   카카오 로그인 중 만든 인증 정보는 .ssolwellnesshouse.com 공유 쿠키에 있어 앱에서 그대로 이어받습니다.
-// - 요청 항목: 카카오 개발자센터 동의항목(닉네임·이메일)과 일치시킴.
-const APP_ORIGIN = "https://app.ssolwellnesshouse.com";
-const KAKAO_SCOPES = "profile_nickname account_email";
-
 kakaoBtn.addEventListener("click", async () => {
   errorEl.hidden = true;
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "kakao",
-    options: { redirectTo: APP_ORIGIN, scopes: KAKAO_SCOPES },
+    options: { redirectTo: window.location.origin + "/login.html" },
   });
   if (error) showError("카카오 로그인을 시작하지 못했어요. 잠시 후 다시 시도해주세요.");
 });
