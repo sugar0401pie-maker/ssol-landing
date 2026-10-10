@@ -36,6 +36,7 @@ input:focus{outline:none;border-color:var(--navy)}
 .btn-navy:disabled{opacity:.6;cursor:default}
 /* 2026-10-10: 퀴즈 로그인 화면(.signup-opt.signup-kakao)과 같은 모양 */
 .btn-kakao{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:auto;padding:14px 16px;border-radius:14px;border:1px solid #fee500;background:#fee500;color:#3a2e1f;font-size:15px;font-weight:700}
+.btn-naver{background:#03c75a;border-color:#03c75a;color:#fff;margin-top:10px}
 .link-btn{background:none;border:none;padding:0;font-size:12.5px;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-family:var(--sans);text-align:center;margin-top:2px}
 .error{font-size:13px;color:#c0392b;margin:0}
 .divider{display:flex;align-items:center;gap:10px;margin:16px 0}
@@ -69,6 +70,7 @@ input:focus{outline:none;border-color:var(--navy)}
 
     <div class="divider"><span>또는</span></div>
     <button type="button" class="btn btn-kakao" id="kakao-btn"><span>💬</span> 카카오로 로그인하기</button>
+    <button type="button" class="btn btn-kakao btn-naver" id="naver-btn"><span>N</span> 네이버로 로그인하기</button>
 
     <p class="signup-line">계정이 없으신가요? <a href="https://app.ssolwellnesshouse.com/signup">회원가입하기</a></p>
   </div>
@@ -145,6 +147,17 @@ kakaoBtn.addEventListener("click", async () => {
     options: { redirectTo: window.location.origin + "/login.html" },
   });
   if (error) showError("카카오 로그인을 시작하지 못했어요. 잠시 후 다시 시도해주세요.");
+});
+
+// 2026-10-10: 네이버 로그인 — 쏘웰라 앱(lib/supabase/authClient.ts)과 같이 Supabase 커스텀 provider("custom:naver")를 씁니다.
+// 돌아오는 주소는 카카오와 똑같이 이 페이지입니다.
+document.getElementById("naver-btn").addEventListener("click", async () => {
+  errorEl.hidden = true;
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "custom:naver",
+    options: { redirectTo: window.location.origin + "/login.html" },
+  });
+  if (error) showError("네이버 로그인을 시작하지 못했어요. 잠시 후 다시 시도해주세요.");
 });
 
 forgotBtn.addEventListener("click", () => {
