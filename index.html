@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>쏠 웰니스 하우스</title>
 <meta name="description" content="가벼운 웰니스 테스트부터 AI 상담 쏘웰라, 전문 상담가와의 1:1 세션까지 — 지금 마음에 맞는 깊이로 시작하세요.">
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -24,7 +24,7 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{overflow-x:clip}
-body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding:0}
+body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding:0;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit}
 h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap:balance;margin:0}
 
@@ -39,6 +39,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap
 .btn.light{background:#fff;color:var(--navy)}
 .btn.ghost-l{border-color:rgba(255,255,255,.55);color:#fff}
 .stack{display:flex;flex-direction:column;gap:10px}
+
+
 
 /* header */
 .top{position:absolute;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;justify-content:space-between;height:62px;padding-inline:18px}
@@ -100,12 +102,6 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap
 .soon b{display:block;font-size:14.5px;line-height:1.45}
 .soon small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
 .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--navy);color:#fff;margin-bottom:4px}
-.promo{border-radius:18px;background:var(--navy);color:#fff;padding:16px 18px;margin:0 0 20px}
-.promo .badge{background:#fff;color:var(--navy)}
-.promo-price{margin:6px 0 2px;font-size:15px;line-height:1.6}
-.promo-price s{opacity:.6;margin-right:4px}
-.promo-price b{font-size:16.5px}
-.promo-period{margin:0;font-size:12px;color:var(--on-navy-muted)}
 
 /* chat */
 .chat{border-radius:22px;background:#fff;box-shadow:0 14px 36px rgba(3,54,103,.14);overflow:hidden;color:#0F1E2C;border:1px solid #D5E1EA;margin-bottom:20px}
@@ -144,6 +140,118 @@ footer .by{color:var(--navy);text-decoration:underline;text-underline-offset:3px
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .by{color:var(--sky)}}
 footer .links{margin:4px 0;display:flex;gap:6px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
 footer .links a{text-underline-offset:3px}
+
+
+/* v2 additions */
+.shots{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.shots img{display:block;width:100%;border-radius:18px;border:1px solid #D5E1EA;box-shadow:0 14px 36px rgba(3,54,103,.14);background:#fff}
+.report{margin:-2px 0 12px;padding:11px 13px;border-radius:12px;background:var(--sky-soft)}
+.report b{display:block;font-size:13.5px;color:var(--navy)}
+.report small{display:block;font-size:12.3px;color:var(--muted);margin:2px 0 0 !important;line-height:1.55}
+.pick{display:flex;flex-direction:column;gap:6px;align-self:flex-start;max-width:85%}
+.pick span{font-size:12.5px;font-weight:500;border:1.5px solid var(--navy);color:var(--navy);border-radius:99px;padding:5px 12px;background:#fff}
+.cap{font-size:12.5px !important;color:var(--muted) !important;line-height:1.6;margin:-8px 0 18px !important}
+.ladder2{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.ladder2 div{display:flex;align-items:center;gap:4px;flex-wrap:wrap;background:#fff;border:1px solid #D5E1EA;border-radius:12px;padding:9px 10px;color:#0F1E2C}
+.ladder2 em{font-style:normal;font-size:11.5px;font-weight:700;color:#fff;background:var(--navy);border-radius:99px;padding:2px 8px;margin-right:4px}
+.ladder2 span{font-size:12.3px}
+.ladder2 span+span:before{content:"→ ";color:#8395A5}
+.proto{margin:16px 0 0;padding:14px 16px;border-radius:14px;background:rgba(169,196,217,.14)}
+.proto b{display:block;color:#fff;font-size:14.5px}
+.proto span:not(.new){display:block;font-size:13px;color:var(--on-navy-muted);line-height:1.6;margin-top:3px}
+.collab{margin:-6px 0 18px;padding:15px 16px;border-radius:14px;border:1.5px dashed rgba(169,196,217,.6);background:rgba(169,196,217,.08)}
+.collab .badge{background:#C9B47E;color:#0B1B3A}
+.collab b{display:block;color:#fff;font-family:var(--serif);font-size:16.5px;margin-top:2px}
+.collab small{display:block;font-size:12.8px;color:var(--on-navy-muted);line-height:1.6;margin-top:4px}
+.new{display:inline-block;font:700 10px/1 var(--sans);letter-spacing:.5px;background:#E4572E;color:#fff;border-radius:99px;padding:3px 7px;vertical-align:3px;margin-left:6px}
+
+.why{padding-block:40px 36px;background:var(--ground)}
+.why h2{font-size:25px;line-height:1.4;margin:8px 0 10px}
+.why>p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+.cmp{display:flex;flex-direction:column;gap:8px}
+.cmp div{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:var(--card)}
+.cmp b{display:block;font-size:14.5px}
+.cmp em{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.5px;color:#2F5D9A}
+.cmp .us em{color:var(--sky)}
+.cmp small{display:block;font-size:13px;color:var(--muted);line-height:1.6;margin-top:2px}
+.cmp .us{background:var(--navy);border-color:var(--navy);color:#fff}
+.cmp .us small{color:var(--on-navy-muted)}
+.tests{display:flex;flex-direction:column;gap:16px}
+.tcard{border-radius:20px;overflow:hidden;box-shadow:0 14px 36px rgba(3,54,103,.14);background:var(--card);border:1px solid var(--line)}
+.tcard a.img{display:block}
+.tcard img{display:block;width:100%;aspect-ratio:4/4.2;object-fit:cover}
+.tcard .tb{padding:14px 16px 16px}
+.tcard .tb b{display:block;font-size:16px;font-family:var(--serif);line-height:1.4}
+.tcard .tb small{display:block;font-size:13px;color:var(--muted);margin:4px 0 12px;line-height:1.6}
+.tcard .meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tcard .meta span{font-size:11.5px;padding:3px 9px;border-radius:99px;background:var(--sky-soft);color:var(--navy);font-weight:500}
+.tcard.night{background:#0B1B3A;border-color:#0B1B3A;color:#fff}
+.tcard.night small{color:#B3C6D6}
+.tcard.night .meta span{background:rgba(201,180,120,.2);color:#E9D9A6}
+.btn.gold{background:#C9B47E;color:#0B1B3A}
+.soonlist{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.soonlist .soon{margin-top:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 18px}
+.stats div{background:#fff;border-radius:14px;padding:12px 6px;text-align:center;border:1px solid #D5E1EA;color:#0F1E2C}
+.stats b{display:block;font-family:var(--serif);font-size:24px;color:var(--navy);line-height:1.2}
+.stats span{display:block;font-size:11.5px;color:#4E5D6B;line-height:1.4;margin-top:2px}
+.subh{font-size:16px;font-family:var(--serif);font-weight:700;margin:22px 0 10px}
+.flow4{list-style:none;margin:0 0 6px;padding:0;display:flex;flex-direction:column;gap:6px}
+.flow4 li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.6}
+.flow4 i{font-style:normal;flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.safe{border-radius:16px;padding:15px 16px;background:#fff;border:1.5px solid var(--navy);margin:16px 0 18px;color:#0F1E2C}
+.safe b{display:flex;align-items:center;gap:6px;font-size:14.5px;color:var(--navy)}
+.safe p{margin:6px 0 0;font-size:13.5px;color:#33475A;line-height:1.65}
+.plans{display:flex;flex-direction:column;gap:8px;margin:6px 0 10px}
+.plan{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #D5E1EA;border-radius:14px;padding:13px 15px;color:#0F1E2C}
+.plan.best{border:2px solid var(--navy)}
+.plan .l b{font-size:15px}
+.plan .l small{display:block;font-size:12px;color:#4E5D6B}
+.plan .r{text-align:right}
+.plan .r s{display:block;font-size:12px;color:#8395A5}
+.plan .r b{font-family:var(--serif);font-size:19px;color:var(--navy)}
+.tag-best{display:inline-block;font-size:10.5px;font-weight:700;background:var(--navy);color:#fff;border-radius:99px;padding:2px 7px;margin-left:6px;vertical-align:2px}
+.promo{font-size:12.5px;color:var(--navy);font-weight:700;margin:0 0 4px}
+.trial{text-decoration:none;display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:14px;padding:12px 15px;font-size:14.5px;font-weight:700;margin:14px 0 8px}
+.trial span{font-weight:400;font-size:12.5px;color:var(--on-navy-muted)}
+.s3 .flow4 li{color:var(--on-navy)}
+.s3 .flow4 i{background:var(--sky);color:var(--navy)}
+.s3 .subh{color:#fff}
+.themes a span.tt{display:flex;flex-direction:column;gap:2px}
+.themes a em{font-style:normal;font-family:var(--sans);font-size:11.5px;font-weight:700;color:var(--sky);letter-spacing:.5px}
+.themes a i{font-style:normal;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--on-navy-muted);line-height:1.5}
+.s3 .safe{background:rgba(255,255,255,.06);border-color:rgba(169,196,217,.5);color:#fff}
+.s3 .safe b{color:#fff}.s3 .safe p{color:var(--on-navy-muted)}
+.team{padding-block:44px;background:var(--sky-soft)}
+.team h2{font-size:25px;line-height:1.4;margin:8px 0 10px}
+.team>p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+.mem{display:block;background:var(--card);border-radius:16px;padding:14px 16px;border:1px solid var(--line);margin-bottom:10px}
+.mem img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.mem b{display:block;font-size:16px;font-family:var(--serif)}
+.mem .role{display:block;font-size:12px;color:var(--navy);font-weight:700;margin-bottom:6px}
+:root[data-theme="dark"] .mem .role{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mem .role{color:var(--sky)}}
+.mem ul{list-style:none;margin:0;padding:0;font-size:12.8px;color:var(--muted);line-height:1.6}
+.mem .lic{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+.mem .lic span{font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--navy);color:#fff}
+.team .note{font-size:12.5px;color:var(--muted);margin-top:4px}
+.vision{padding-block:48px;background:var(--ground)}
+.vision h2{font-size:25px;line-height:1.45;margin:8px 0 12px}
+.vision>p{margin:0 0 20px;color:var(--muted);font-size:14.5px}
+.cycle{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:22px}
+.cycle div{border-radius:14px;padding:13px 14px;background:var(--sky-soft)}
+.cycle div:nth-child(4){background:var(--navy);color:#fff}
+.cycle div:nth-child(4) small{color:var(--on-navy-muted)}
+.cycle em{font-style:normal;font-size:11px;font-weight:700;color:#2F5D9A;letter-spacing:.5px}
+.cycle div:nth-child(4) em{color:var(--sky)}
+.cycle b{display:block;font-size:14.5px;margin-top:2px}
+.cycle small{display:block;font-size:12.3px;color:var(--muted);line-height:1.55;margin-top:2px}
+.prn{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.prn li{border-left:3px solid var(--navy);padding-left:12px}
+:root[data-theme="dark"] .prn li{border-color:var(--sky)}
+.prn b{display:block;font-size:15px;font-family:var(--serif)}
+.prn span{display:block;font-size:13.5px;color:var(--muted);line-height:1.65;margin-top:2px}
+.close .slogan{font-size:13.5px;color:var(--on-navy-muted);margin:0}
 </style>
 </head>
 <body>
@@ -160,12 +268,12 @@ footer .links a{text-underline-offset:3px}
       <div class="hero-in">
         <span class="eyebrow">Ssol Wellness House</span>
         <h1 id="headline">이유 없이 '그냥'<br>힘드신가요?</h1>
-        <p class="lead">가벼운 테스트부터 AI 상담 <b>쏘웰라</b>,<br>전문 상담가와의 세션까지.<br>지금 마음에 맞는 깊이로 시작하세요.</p>
+        <p class="lead">가벼운 테스트부터 AI 웰니스 상담 <b>쏘웰라</b>,<br>멘탈 웰니스 트레이너와의 1:1 세션까지.<br>지금 마음에 맞는 깊이로 시작하세요.</p>
         <div class="stack">
-          <a class="btn light" href="https://quiz.ssolwellnesshouse.com?utm_source=www">3분 테스트 해보기</a>
+          <a class="btn light" href="#test">상담사가 직접 만든 웰니스 테스트 해보기</a>
           <a class="btn ghost-l" href="https://app.ssolwellnesshouse.com?utm_source=www">쏘웰라와 대화하기</a>
         </div>
-        <div class="sub">전문 상담가를 바로 만나고 싶다면 <a class="inline" href="https://www.ssolwellness.com/reserve">상담 예약하기 →</a></div>
+        <div class="sub">전문가와 바로 시작하고 싶다면 <a class="inline" href="https://www.ssolwellness.com/reserve">세션 예약하기 →</a></div>
       </div>
       <svg class="waves" viewBox="0 0 430 64" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 34 C 60 14 120 14 180 30 S 300 52 360 34 S 410 20 430 26 L430 64 L0 64 Z" fill="#A9C4D9" opacity=".35"/>
@@ -173,11 +281,24 @@ footer .links a{text-underline-offset:3px}
       </svg>
     </section>
 
+    <!-- NEW: 왜 쏠인가 -->
+    <section class="why pad" id="why">
+      <span class="eyebrow" style="color:var(--navy)">Why SSOL</span>
+      <h2>임상보다 가깝고,<br>일상에 밀착된 웰니스 상담</h2>
+      <p>심리치료와 사주·타로 사이, 해결되지 않던 '일상의 고민'을 해결합니다. 쉽게 꺼내기 어려웠던 내 마음속의 질문들, 쏘웰라에게 편하게 꺼내주세요.</p>
+      <div class="cmp">
+        <div><em>목적</em><b>내가 직접 체감하는 내 삶의 변화</b><small>해결책만 건네지 않고, 스스로 문제를 알아보고 풀어갈 수 있는 힘을 길러요</small></div>
+        <div><em>대상</em><b>누구나, 걱정과 고민이 생긴 순간</b><small>진단이 필요할 때만이 아니라, 일상에서 마음이 쓰이는 모든 순간에</small></div>
+        <div><em>방식</em><b>선택의 기준을 분명하게</b><small>상담 이론을 바탕으로 고민을 정리하고, 필요할 땐 적극적으로 함께 움직여요</small></div>
+        <div class="us"><em>기간</em><b>졸업 후에도 이어지는 관리</b><small>헬스장 PT처럼, 트레이너와의 세션과 AI 쏘웰라가 온·오프라인에서 꾸준히 함께해요</small></div>
+      </div>
+    </section>
+
     <section class="ladder pad">
       <h2>물가에서 시작해<br>깊은 바다까지</h2>
       <p>가볍게 나를 알아보고, 필요할 때 이야기하고, 더 깊이 들여다보고 싶을 때 전문가를 만나세요.</p>
       <div class="depth">
-        <a class="d1" href="#test"><span class="n">1</span><span><b>나를 알아보기</b><small>웰니스 테스트 · 3분</small></span></a>
+        <a class="d1" href="#test"><span class="n">1</span><span><b>나를 알아보기</b><small>웰니스 테스트 · 약 5분</small></span></a>
         <a class="d2" href="#chat"><span class="n">2</span><span><b>언제든 이야기하기</b><small>AI 웰니스 상담 쏘웰라</small></span></a>
         <a class="d3" href="#expert"><span class="n">3</span><span><b>전문가와 깊이 있게</b><small>1:1 멘탈 웰니스 세션</small></span></a>
       </div>
@@ -186,23 +307,28 @@ footer .links a{text-underline-offset:3px}
     <!-- STEP 1 -->
     <section class="step s1 pad" id="test">
       <span class="eyebrow">Step 1 · 나를 알아보기</span>
-      <h2>디저트로 알아보는<br>나의 웰니스 유형</h2>
-      <p>티파티에 초대받았는데, 알고 보니 내가 디저트라면? 가벼운 질문에 답하다 보면 평소 잘 보이지 않던 나의 마음 습관이 캐릭터로 나타나요.</p>
-      <a class="quiz" href="https://quiz.ssolwellnesshouse.com?utm_source=www">
-        <img src="https://quiz.ssolwellnesshouse.com/images/hero/hero-intro.jpg" alt="티파티에 초대받은 내가 사실은 디저트?! 테스트 대표 이미지">
-        <span class="bar"><b>티파티에 초대받은 내가 사실은 디저트?!</b></span>
-      </a>
-      <div class="count" style="justify-content:center;margin-bottom:16px"><i></i>벌써 1,524명이 참여했어요</div>
-      <ul class="facts">
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>회원가입 없이 바로 시작</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>전문 상담가가 설계한 문항</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>결과를 바탕으로 쏘웰라와 상담할 수 있어요</li>
-      </ul>
-      <a class="btn solid" href="https://quiz.ssolwellnesshouse.com?utm_source=www">테스트 하기</a>
-
-      <div class="soon" aria-label="준비 중인 테스트">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-        <div><span class="badge">준비 중</span><b>새로운 웰니스 테스트를 준비하고 있어요</b><small>곧 다른 테스트로 찾아올게요.</small></div>
+      <h2>테스트로 알아보는<br>나의 웰니스</h2>
+      <p>상담심리 전문가가 상담 이론을 토대로 문항·유형·해석을 직접 설계하고 검토했어요. 가볍게 시작해도, 결과는 나를 이해하는 단서가 돼요.</p>
+      <div class="tests">
+        <div class="tcard">
+          <a class="img" href="https://quiz.ssolwellnesshouse.com?utm_source=www"><img src="https://quiz.ssolwellnesshouse.com/images/hero/hero-intro.jpg" alt="티파티에 초대받은 내가 사실은 디저트?! 테스트 대표 이미지" style="object-position:50% 42%"></a>
+          <div class="tb"><b>티파티에 초대받은 내가 사실은 디저트?!</b><small>커리어·연애·관계·나 자신·삶의 방향, 다섯 영역에서 지금 가장 고민이 깊은 곳과 나의 대처 방식을 디저트 캐릭터로 알려줘요.</small>
+            <div class="meta"><span>약 5분</span><span>회원가입 없이</span><span>15유형</span></div>
+            <div class="report"><b>더 알고 싶다면, 심층 보고서</b><small>내가 왜 이 유형인지, 다른 사람과 비교해 두드러지는 점, 더 나아질 수 있는 방법까지 알려줘요.<br>AI 기반 웰니스 상담 쏘웰라 7일 무료 이용권도 함께 드려요.</small></div>
+            <a class="btn solid" href="https://quiz.ssolwellnesshouse.com?utm_source=www">디저트 테스트 하기</a></div>
+        </div>
+        <div class="tcard night">
+          <a class="img" href="https://astro.ssolwellnesshouse.com?utm_source=www"><img src="images/astro-card.jpg" alt="별빛 아래 배에 모인 12별자리 캐릭터, 쏠 아스트로 하우스 대표 이미지"></a>
+          <div class="tb"><b>쏠 아스트로 하우스 <span class="new">NEW</span></b><small>태어난 날의 하늘로 보는 나. 출생 차트로 나의 2026년을 돌아보고, 2027년과 앞으로의 흐름에 맞춘 웰니스 제안을 받아요.</small>
+            <div class="meta"><span>출생 차트</span><span>2026 회고</span><span>2027 흐름</span></div>
+            <a class="btn gold" href="https://astro.ssolwellnesshouse.com?utm_source=www">별자리 테스트 하기</a></div>
+        </div>
+      </div>
+      <div class="soonlist">
+        <div class="soon"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 8l1.2 2.6 2.8.3-2.1 1.9.6 2.8L12 14.2l-2.5 1.4.6-2.8L8 10.9l2.8-.3z"/></svg></div>
+          <div><span class="badge">곧 만나요</span><b>웰니스 타로 하우스</b><small>고민을 고르면 웰니스 타로카드와 해법을 건네요.</small></div></div>
+        <div class="soon"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M3 17c3-4 6-4 9 0s6 4 9 0"/></svg></div>
+          <div><span class="badge" style="background:#4E5D6B">준비 중</span><b>바다 친구들 관계성 테스트</b><small>관계 속 나의 모습을 알아보는 테스트를 준비하고 있어요.</small></div></div>
       </div>
     </section>
 
@@ -210,25 +336,37 @@ footer .links a{text-underline-offset:3px}
     <section class="step s2 pad" id="chat">
       <span class="eyebrow">Step 2 · 언제든 이야기하기</span>
       <h2>말하기 어려운 이야기,<br>쏘웰라에게 먼저</h2>
-      <p>전문 상담가가 개발한 AI 웰니스 상담 쏘웰라는 판단 없이 끝까지 들어요. 혼자 삼키기엔 무거운 고민이라면 여기서 시작해도 괜찮아요.</p>
-      <div class="chat" aria-label="쏘웰라 대화 화면 미리보기">
-        <div class="h">AI 채팅<span>새 대화</span></div>
-        <div class="b">
-          <div class="bub ai">안녕하세요, 쏠 웰니스 하우스예요. 요즘 마음에 머무는 이야기가 있다면 편하게 들려주시기 바랍니다.</div>
-          <div class="bub me">요즘 이유 없이 무기력해요.</div>
-          <div class="bub ai">이야기해 주셔서 고마워요. 하루 중 언제 그 느낌이 가장 크게 오는지 조금 더 들려주실래요?</div>
-        </div>
-        <div class="f"><div class="in">마음에 있는 이야기를 적어주세요</div><div class="rb">추천 질문</div><div class="sb">보내기</div></div>
+      <p>쏘웰라는 기다리기만 하는 챗봇이 아니에요. 상담심리 전문가가 설계·검수한 데이터베이스가 어떤 이론을 적용할지, 무엇을 물을지, 어떤 실천을 제안할지를 정하고, AI는 그것을 내 상황에 맞는 자연스러운 말로 전해요.</p>
+      <div class="shots" aria-label="실제 쏘웰라 대화 화면">
+        <img src="images/sowella-chat.jpg" alt="쏘웰라 대화 화면 1: 직장 내 괴롭힘 고민에 상황을 나누어 묻는 대화">
       </div>
-      <ul class="facts">
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>웰니스 테스트 결과를 바탕으로 한 맞춤 답변</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>매일 나에게 맞는 작은 실천 제안</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>가입 후 7일 무료</li>
-      </ul>
-      <div class="promo">
-        <span class="badge">10월 오픈 기념 특별가</span>
-        <p class="promo-price">월간 <s>7,900원</s> <b>2,900원</b> · 연간 <s>60,000원</s> <b>22,800원</b>(월 1,900원)</p>
-        <p class="promo-period">2026년 10월 1일 ~ 10월 31일 한정</p>
+      <p class="cap">실제 쏘웰라 대화 화면</p>
+
+      <p class="subh">쏘웰라가 믿을 수 있는 이유</p>
+      <div class="stats"><div><b>14</b><span>가지 상담 이론<br>지식베이스</span></div><div><b>917</b><span>가지 실천 제안<br>데이터베이스</span></div><div><b>884</b><span>개 개념 연결<br>질문</span></div></div>
+      <p class="cap" style="margin-top:-8px !important">ACT, CBT, REBT, 스키마치료, EFT 등 14가지 상담 이론을 갖추고, 학습되는 모든 콘텐츠는 상담심리 전문가의 검수를 거쳐요.</p>
+      <ol class="flow4">
+        <li><i>1</i><span>세 번째 대화 안에 고민의 핵심을 짚고, 원하면 웰니스 상담으로 이어가요.</span></li>
+        <li><i>2</i><span>열기 → 명료화 → 재구성 → 다짐의 흐름으로, 오늘 바로 해볼 수 있는 한 걸음을 제안해요.</span></li>
+        <li><i>3</i><span>테스트 결과, 심층 보고서, 나의 웰니스 프로필, 처음 알려준 이야기, 지난 대화, 세션 기록까지 함께 기억해요. 매번 처음부터 설명하지 않아도 돼요.</span></li>
+      </ol>
+      <p class="subh">내 속도에 맞춘 실천</p>
+      <p class="cap" style="margin:-4px 0 10px !important">걷기 시작한 아기에게 달리기를 요구하지 않듯, 917가지 실천 중 지금의 나에게 맞는 단계부터 제안해요.</p>
+      <div class="ladder2">
+        <div><em>운동</em><span>스트레칭</span><span>걷기</span><span>달리기</span><span>그룹 트레이닝</span></div>
+        <div><em>감정</em><span>한 줄 기록</span><span>3분 호흡</span><span>친구에게 털어놓기</span><span>세션 예약</span></div>
+        <div><em>관계</em><span>안부 메시지</span><span>짧은 통화</span><span>직접 만나기</span><span>솔직한 대화</span></div>
+      </div>
+      <div class="safe"><b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>안전 장치</b>
+        <p>모든 대화는 '안전 라우터'를 먼저 거쳐요. 신체적 위협이나 극심한 우울감처럼 진료·임상 상담이 필요한 신호가 있으면 이론 적용을 멈추고 전문 기관을 안내해요. 이론을 적용하는 것이 오히려 상처를 건드릴 수 있다고 판단되면, 이론을 쓰지 않아요.</p>
+        <p style="margin-top:10px"><b style="display:inline;font-size:13.5px">대화 기록은 나만의 것</b> · 웰니스 세션을 함께하는 트레이너도 본인 동의 없이는 쏘웰라 대화를 볼 수 없어요.</p></div>
+
+      <a class="trial" href="https://app.ssolwellnesshouse.com?utm_source=www">가입하면 3일 무료<span>· 마음에 들면 이어서 →</span></a>
+      <p class="promo">10월 오픈 기념 특별가 · 2026년 10월 1일 ~ 10월 31일 한정</p>
+      <div class="plans">
+        <div class="plan"><div class="l"><b>1개월</b></div><div class="r"><s>7,900원</s><b>4,500원</b></div></div>
+        <div class="plan best"><div class="l"><b>3개월<span class="tag-best">대표</span></b><small>한 달 2,900원 꼴</small></div><div class="r"><b>8,700원</b></div></div>
+        <div class="plan"><div class="l"><b>12개월</b><small>한 달 1,900원 꼴</small></div><div class="r"><s>60,000원</s><b>22,800원</b></div></div>
       </div>
       <a class="btn solid" href="https://app.ssolwellnesshouse.com?utm_source=www">지금 대화를 시작하세요</a>
     </section>
@@ -236,27 +374,76 @@ footer .links a{text-underline-offset:3px}
     <!-- STEP 3 -->
     <section class="step s3 pad" id="expert">
       <span class="eyebrow">Step 3 · 전문가와 깊이 있게</span>
-      <h2 style="color:#fff">전문 웰니스 상담가와의<br>1:1 멘탈 웰니스 세션</h2>
-      <p>웰니스 세션의 목표는 과학적, 철학적 지혜로 '충만한 삶'에 닿는 것이에요. 다섯 가지 테마 중 지금 내게 필요한 것을 골라 시작하세요.</p>
+      <h2 style="color:#fff">멘탈 웰니스 트레이너와 함께하는<br>1:1 웰니스 세션</h2>
+      <p>웰니스 세션은 상담이 아니라 마음을 단련하는 트레이닝이에요. 헬스장 PT처럼, 8회기 동안 나만의 메인 미션을 정하고 실제로 달라지는 경험을 만들어요. 목표는 과학적, 철학적 지혜로 '충만한 삶'에 닿는 것이에요.</p>
       <div class="evidence">
-        <p>상위 25% 전문가는 2세션 만에, 하위 25% 전문가가 10세션에 도달하는 효과 크기를 달성했습니다.</p>
-        <cite>Mahon, Minami &amp; Brown (2025)</cite>
+        <p>같은 효과에 닿기까지 상위 25% 전문가는 2세션, 하위 25% 전문가는 10세션이 걸렸어요(Mahon, Minami &amp; Brown, 2025). 어떤 전문가를 만나느냐에 따라 상담의 효과가 달라집니다. 쏠은 상위 25%의 기준으로 세션을 운영해요. 트레이너는 역량 평가로, 세션은 매 회기 효과 측정으로 확인합니다.</p>
       </div>
-      <div class="offer">
+      <p class="subh">이렇게 진행돼요</p>
+      <ol class="flow4">
+        <li><i>1</i><span><b>20분 첫 면담과 검사</b> · 나에게 맞는 세션인지 먼저 확인해요</span></li>
+        <li><i>2</i><span><b>메인 미션 정하기</b> · 8회기 동안 이룰 목표 1~2개와 달성 기준을 함께 정해요</span></li>
+        <li><i>3</i><span><b>주 1회 세션 + 세션 사이 퀘스트</b> · 쏘웰라가 세션 사이의 실천을 함께 챙겨요. 매 회기 미션 게이지(0~10)로, 4회기와 8회기에는 검사로 변화를 다시 확인해요</span></li>
+        <li><i>4</i><span><b>졸업과 유지</b> · 혼자 쓸 도구와 유지 계획을 갖고 졸업해요. 필요하면 4주 뒤 추수 세션도 이어가요</span></li>
+      </ol>
+      <div class="proto"><b>모든 세션은 쏠의 웰니스 상담 매뉴얼로</b><span>고민 영역마다 주 이론과 보조 이론을 정한 자체 매뉴얼로 8회기를 설계하고, 참가자에 맞게 조정한 내용은 매주 팀 라운드테이블에서 함께 검토해요. 세션 사이에는 쏘웰라가 같은 이론으로 실천 점검을 이어가요.</span></div>
+      <div class="offer" style="margin-top:16px">
         <span>신규고객 면담 20분 · 10,000원</span>
+        <span>주 1회 권장</span>
         <span>화상 (Google Meet)</span>
         <span>센터 · 공덕, 상수</span>
+        <span>영어 세션 가능</span>
       </div>
-      <p class="themes-t">테마 안내</p>
+      <p class="themes-t">세션 테마</p>
       <ul class="themes">
-        <li><a href="https://www.ssolwellness.com/perfectionism">완벽 대신 탁월하기 <small>→</small></a></li>
-        <li><a href="https://www.ssolwellness.com/happiness">행복을 훈련하기 <small>→</small></a></li>
-        <li><a href="https://www.ssolwellness.com/anxiety">불안 다스리기 <small>→</small></a></li>
-        <li><a href="https://www.ssolwellness.com/purpose">삶의 방향성 찾기 <small>→</small></a></li>
-        <li><a href="https://www.ssolwellness.com/romance">연애 패턴 바꾸기 <small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/perfectionism"><span class="tt"><em>진로</em>완벽 대신 탁월하기<i>성과 불안과 자기비판을 탁월함의 에너지로</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/romance"><span class="tt"><em>연애</em>연애 패턴 바꾸기<i>반복되는 장면을 알아차리고, 속마음을 한 문장으로</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/group"><span class="tt"><em>그룹</em>그룹 웰니스 세션<i>8~10명이 함께, 심리학으로 삶과 사람을 이야기해요</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/happiness"><span class="tt"><em>자기</em>행복을 훈련하기<i>좋은 순간을 늘리고, 나에게 조금 더 다정하게</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/purpose"><span class="tt"><em>인생</em>삶의 방향성 찾기<i>내 삶의 의미와 가치를 찾고, 가장 작은 첫걸음부터</i></span><small>→</small></a></li>
       </ul>
-      <a class="btn light" href="https://www.ssolwellness.com/reserve">상담 예약하기</a>
+      <div class="collab"><span class="badge">Coming soon</span><b>콜라보 세션, 기대해 주세요</b><small>요가 클래스, 나만의 책 만들기 공방처럼 몸과 손을 움직이며 마음을 돌보는 오프라인 웰니스 세션을 준비하고 있어요.</small></div>
+      <div class="safe"><b>먼저 확인하는 것</b><p>첫 면담에서 마음 상태를 함께 살펴요. 급한 위기 상황이라면 웰니스 세션 대신 협력 기관을 먼저 안내해 드려요.</p></div>
+      <a class="btn light" href="https://www.ssolwellness.com/reserve">세션 예약하기</a>
       <a class="more" href="https://www.ssolwellness.com/wellnessintro">멘탈 웰니스 세션이 궁금하다면</a>
+    </section>
+
+    <!-- NEW: TEAM -->
+    <section class="team pad" id="team">
+      <span class="eyebrow" style="color:var(--navy)">Our Team</span>
+      <h2>쏠을 만드는 사람들</h2>
+      <p>임상·상담심리와 예술치료를 전공한 트레이너들이 테스트 문항부터 쏘웰라의 대화, 1:1 세션까지 직접 설계하고 진행해요.</p>
+      <div class="mem"><div><span class="role">대표 · 멘탈 웰니스 트레이너</span><b>김준석</b>
+        <ul><li>서울대 임상 및 상담심리 석사 · 연세대 경영학·심리학 학사</li><li>現 서울대 대학생활문화원 집단강사</li><li>前 (주)마음바다 멘탈 헬스 앱 PM</li><li>前 은평성모병원 정신건강의학과 연구원</li><li>前 AHS 영어 전문 심리상담사</li><li>前 (주)소예키즈 심리 자문위원</li></ul>
+        <div class="lic"><span>상담심리사 2급</span><span>청소년상담사 2급</span></div></div></div>
+      <div class="mem"><div><span class="role">전문위원 · 멘탈 웰니스 트레이너</span><b>오세민</b>
+        <ul><li>서울대 임상 및 상담심리 석사 · 서울대 심리학·미학 학사</li><li>前 서울대병원 정신건강의학과 정신건강임상심리사 수련 · 서울대 대학생활문화원 상담원</li></ul>
+        <div class="lic"><span>정신건강임상심리사 1급</span></div></div></div>
+      <div class="mem"><div><span class="role">전문위원 · 멘탈 웰니스 트레이너</span><b>오유주</b>
+        <ul><li>동덕여대 통합예술치료학 석사</li><li>現 티엔에프컨설팅(주) 선임 HR컨설턴트</li><li>前 서울대 심리과학연구소 연구원 · 학교 통합예술치료사</li></ul>
+        <div class="lic"><span>통합예술심리지도사 1급</span></div></div></div>
+      <div class="mem"><div><span class="role">CSO · 전략</span><b>곽혜진</b>
+        <ul><li>연세대 경영학 학사</li><li>前 IaaS 기업 전략팀 · 해외 진출 테크 및 헬스케어 스타트업 컨설팅</li></ul></div></div>
+      <p class="note">이 밖에 자문위원을 포함한 전문가 풀과 함께해요. 품질을 지키기 위해 서두르지 않고, 검증된 전문가와 천천히 함께 커가요.</p>
+    </section>
+
+    <!-- NEW: VISION -->
+    <section class="vision pad" id="vision">
+      <span class="eyebrow" style="color:var(--navy)">Our Vision</span>
+      <h2>더 많은 사람들이<br>'충만한 삶'을 살 수 있도록</h2>
+      <p>쏠의 비전은 임상보다 가깝게, 일상의 고민에 맞닿은 웰니스 상담을 온·오프라인으로 제공해 더 많은 사람들이 충만한 삶을 살도록 돕는 것이에요. 정신건강 분야의 PT(퍼스널 트레이너)로서, 증상 해석에 그치지 않고 더 나은 선택을 돕는 장기적인 동반자가 되려 해요.</p>
+      <div class="cycle">
+        <div><em>01 · 테스트</em><b>필요를 알아차리기</b><small>재미있게 시작해 나를 이해하는 단서 얻기</small></div>
+        <div><em>02 · 쏘웰라</em><b>일상에서 실천·점검</b><small>언제든 이야기하고 오늘의 한 걸음 찾기</small></div>
+        <div><em>03 · 세션</em><b>더 나은 방향 찾기</b><small>분야별 트레이너와 8회기 마음 트레이닝</small></div>
+        <div><em>04 · 졸업 · 유지</em><b>스스로 서는 순간까지</b><small>쏘웰라와 재검사로 가볍게 관리하고, 필요할 때 다시</small></div>
+      </div>
+      <ul class="prn">
+        <li><b>스스로 해결하는 힘</b><span>정답을 대신 내려주기보다, 스스로 문제를 알아보고 해결할 수 있는 힘을 기르도록 곁에서 함께해요.</span></li>
+        <li><b>회기가 끝나도 끝나지 않는 관리</b><span>헬스장 PT처럼 졸업 후에도 쏘웰라와 재검사로 이어가요. 같은 고민을 나누는 쏠 알럼나이 커뮤니티도 준비하고 있어요.</span></li>
+        <li><b>전문성은 타협하지 않아요</b><span>트레이너는 역량으로, 서비스는 효과로 증명해요. 쏠이 도울 수 없는 상황이라면 더 알맞은 기관과 연결해요.</span></li>
+        <li><b>언제든 다시 찾아올 수 있게</b><span>고민이 생긴 순간 부담 없이 들를 수 있도록, 문턱은 낮게 유지해요. 영어 세션으로 해외에서도 함께해요.</span></li>
+      </ul>
     </section>
 
     <section class="close">
@@ -264,7 +451,7 @@ footer .links a{text-underline-offset:3px}
       <h2>성공과 행복 그 너머,<br>그 이상의 나를 만나는 곳</h2>
       <p>오늘은 어디서부터 시작해 볼까요?</p>
       <div class="stack">
-        <a class="btn light" href="https://quiz.ssolwellnesshouse.com?utm_source=www">3분 테스트 해보기</a>
+        <a class="btn light" href="#test">상담사가 직접 만든 웰니스 테스트 해보기</a>
         <a class="btn ghost-l" href="https://app.ssolwellnesshouse.com?utm_source=www">쏘웰라와 대화하기</a>
       </div>
     </section>
@@ -280,9 +467,9 @@ footer .links a{text-underline-offset:3px}
 
 <script>
 (function(){
-  var H=["딱 터놓고 말 할<br>누군가가 필요하세요?","말하기 어려운<br>고민이 있으신가요?","해결책을 찾지 못해<br>힘드신가요?","이유 없이 '그냥'<br>힘드신가요?","삶이 버겁고<br>지치셨나요?","불안해서 잠못이루는<br>날이 있으신가요?","이유없는 불안때문에<br>힘드신가요?","정리가 안되고 정신없는<br>나날이 계속되나요?","이유없는 불안으로 인해<br>힘드신가요?","왜 나만<br>힘든걸까요?","너무 지쳐서 새로 시작하기<br>벅차신가요?","막연한 미래때문에<br>힘들어하시나요?"];
+  var H=["딱 터놓고 말 할<br>누군가가 필요하세요?","말하기 어려운<br>고민이 있으신가요?","해결책을 찾지 못해<br>힘드신가요?","이유 없이 '그냥'<br>힘드신가요?","삶이 버겁고<br>지치셨나요?","불안해서 잠못이루는<br>날이 있으신가요?","이유없는 불안때문에<br>힘드신가요?","정리가 안되고 정신없는<br>나날이 계속되나요?","내가 뭘 하고 있나<br>싶은 생각이 드시나요?"];
   var last=-1; try{ last=+(sessionStorage.getItem('ssol-h')||-1); }catch(e){}
-  var i; do{ i=Math.floor(Math.random()*H.length); }while(i===last && H.length>1);
+  var i; do{ i=Math.floor(Math.random()*H.length); }while(i===last);
   try{ sessionStorage.setItem('ssol-h',i); }catch(e){}
   document.getElementById('headline').innerHTML=H[i];
 })();
