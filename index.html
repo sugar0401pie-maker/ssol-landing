@@ -108,10 +108,6 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap
 .chat .h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #DDE6EE;font-size:14px;font-weight:500}
 .chat .h span{font-size:12px;border:1px solid #D5E1EA;border-radius:99px;padding:3px 9px}
 .chat .b{padding:14px;display:flex;flex-direction:column;gap:9px;font-size:13.5px;line-height:1.6}
-.chat .h .pills{display:flex;gap:6px}
-.chat .h .pills span.on{border-color:var(--navy);color:var(--navy)}
-.chat.peek .b{position:relative;max-height:430px;overflow:hidden}
-.chat.peek .fade{position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 85%);pointer-events:none}
 .bub{max-width:85%;padding:9px 13px;border-radius:15px}
 .ai{background:#E6EDF5;align-self:flex-start}
 .me{background:var(--navy);color:#fff;align-self:flex-end}
@@ -341,18 +337,15 @@ footer .links a{text-underline-offset:3px}
       <span class="eyebrow">Step 2 · 언제든 이야기하기</span>
       <h2>말하기 어려운 이야기,<br>쏘웰라에게 먼저</h2>
       <p>쏘웰라는 기다리기만 하는 챗봇이 아니에요. 상담심리 전문가가 설계·검수한 데이터베이스가 어떤 이론을 적용할지, 무엇을 물을지, 어떤 실천을 제안할지를 정하고, AI는 그것을 내 상황에 맞는 자연스러운 말로 전해요.</p>
-      <div class="chat peek" role="img" aria-label="쏘웰라 대화 화면 예시: 직장 내 괴롭힘 고민에 상황을 나누어 묻는 대화">
-        <div class="h"><b>쏘웰라</b><div class="pills"><span>지난 대화</span><span class="on">새 대화</span></div></div>
-        <div class="b" aria-hidden="true">
-          <div class="bub me">직장 내 괴롭힘때문에 회사다니기 힘듦</div>
-          <div class="bub ai">직장 내 괴롭힘 때문에 출근과 업무 자체가 버겁게 느껴질 만큼 많이 지친 상태로 보여요. 혼자 참고 버티는 동안 마음이 계속 긴장했을 수도 있겠어요.<br><br>먼저 상황을 나누어 이해해보고 싶어요. 신체적인 위협이나 폭력이 있었나요, 아니면 주로 말이나 태도, 배제 같은 정신적으로 힘든 상황인가요?</div>
-          <div class="bub me">말이나 태도, 배제같은 상황</div>
-          <div class="bub ai">말과 태도, 배제처럼 겉으로 잘 드러나지 않는 상황은 주변에 설명하기도 어렵고, 반복될수록 내가 과민한가 싶어지기 쉬워요. 하지만 그 불편함을 가볍게 넘길 필요는 없습니다. 상대의 행동과 나의 가치·능력은 분리해서 바라봐도 좋아요.<br><br>가볍게는 오늘 가장 힘들었던 일을 감정과 함께 짧게 적어보거나, 믿을 만한 사람에게 해결보다 먼저 들어달라고</div>
-          <div class="fade"></div>
+      <div class="chat" aria-label="쏘웰라 대화 화면 미리보기">
+        <div class="h">AI 채팅<span>새 대화</span></div>
+        <div class="b">
+          <div class="bub ai">안녕하세요, 쏠 웰니스 하우스예요. 요즘 마음에 머무는 이야기가 있다면 편하게 들려주시기 바랍니다.</div>
+          <div class="bub me">요즘 이유 없이 무기력해요.</div>
+          <div class="bub ai">이야기해 주셔서 고마워요. 하루 중 언제 그 느낌이 가장 크게 오는지 조금 더 들려주실래요?</div>
         </div>
-        <div class="f" aria-hidden="true"><div class="in">마음에 있는 이야기를 적어주세요</div><div class="rb">추천 질문</div><div class="sb">보내기</div></div>
+        <div class="f"><div class="in">마음에 있는 이야기를 적어주세요</div><div class="rb">추천 질문</div><div class="sb">보내기</div></div>
       </div>
-      <p class="cap">쏘웰라 대화 예시 (시연 화면)</p>
 
       <p class="subh">쏘웰라가 믿을 수 있는 이유</p>
       <div class="stats"><div><b>14</b><span>가지 상담 이론<br>지식베이스</span></div><div><b>917</b><span>가지 실천 제안<br>데이터베이스</span></div><div><b>884</b><span>개 개념 연결<br>질문</span></div></div>
