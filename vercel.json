@@ -2,9 +2,25 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "ssolwellnesshouse.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "ssolwellnesshouse.com"
+        }
+      ],
       "destination": "https://www.ssolwellnesshouse.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/ssowella.html",
+      "destination": "/about.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about.html"
     }
   ]
 }
