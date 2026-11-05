@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="msvalidate.01" content="5F7F74F02C08FB70A6A250B0DB0A7ADF" />
+<meta name="naver-site-verification" content="ea4a296f8a018dc2fadcc3cda176bd79b4e8f469" />
+<title>쏘웰라 대화 내용과 개인정보 보호 — AI 심리상담 데이터는 어떻게 다루나요 | 쏠 웰니스 하우스</title>
+<meta name="description" content="쏘웰라는 민감한 원문과 건강 관련 정보를 입력 단계에서 마스킹해 처리해요. 대화 기록 보호, 삭제·숨김, 트레이너의 열람 제한, 개인정보처리방침 안내를 쉽게 정리했어요.">
+<link rel="canonical" href="https://www.ssolwellnesshouse.com/privacy-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="쏠 웰니스 하우스">
+<meta property="og:title" content="쏘웰라 대화 내용과 개인정보 보호 — AI 심리상담 데이터는 어떻게 다루나요 | 쏠 웰니스 하우스">
+<meta property="og:description" content="쏘웰라는 민감한 원문과 건강 관련 정보를 입력 단계에서 마스킹해 처리해요. 대화 기록 보호, 삭제·숨김, 트레이너의 열람 제한, 개인정보처리방침 안내를 쉽게 정리했어요.">
+<meta property="og:url" content="https://www.ssolwellnesshouse.com/privacy-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#033667; --navy-deep:#022447; --sky:#A9C4D9; --sky-soft:#E3EDF4;
+  --page:#E9EFF4; --ground:#FFFFFF; --ink:#0F1E2C; --muted:#4E5D6B; --line:#D5E1EA; --card:#FFFFFF;
+  --on-navy:#F2F6FA; --on-navy-muted:#B3C6D6;
+  --serif:'Gowun Batang','Nanum Myeongjo',serif;
+  --sans:'Noto Sans KR',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding:0;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap:balance;margin:0}
+
+.app{max-width:430px;margin:0 auto;background:var(--ground);box-shadow:0 0 0 1px var(--line),0 20px 60px rgba(3,54,103,.12);position:relative}
+@media (min-width:600px){.app{margin-block:24px;border-radius:28px;overflow:hidden}}
+.pad{padding-inline:20px}
+
+.eyebrow{font-size:11.5px;letter-spacing:1.8px;font-weight:700;text-transform:uppercase}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:52px;border-radius:14px;font-weight:700;font-size:15.5px;text-decoration:none;border:1.5px solid transparent}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.btn.solid{background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy)}
+.btn.ghost-l{border-color:rgba(255,255,255,.55);color:#fff}
+.stack{display:flex;flex-direction:column;gap:10px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;justify-content:space-between;height:62px;padding-inline:18px}
+.logo{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.logo img{width:34px}
+.login{font-size:13px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:5px 12px;border-radius:99px}
+
+footer{padding:28px 20px 36px;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.8;display:flex;flex-direction:column;align-items:center;gap:2px}
+footer .by{color:var(--navy);text-decoration:underline;text-underline-offset:3px;font-size:13px}
+:root[data-theme="dark"] footer .by{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .by{color:var(--sky)}}
+footer .links{margin:4px 0;display:flex;gap:6px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+footer .links a{text-underline-offset:3px}
+/* ssowella page */
+.phero{background:linear-gradient(180deg,#0A3D6E 0%,var(--navy) 100%);color:#fff;padding:96px 20px 44px}
+.phero-in{display:flex;flex-direction:column;gap:16px}
+.phero .eyebrow{color:var(--sky)}
+.phero h1{font-size:29px;line-height:1.38}
+.phero p{margin:0;font-size:14.5px;color:var(--on-navy-muted)}
+.phero p b{color:#fff;font-weight:700}
+.doc{padding-block:8px 40px}
+.doc section{padding-block:26px 6px}
+.doc h2{font-size:22px;line-height:1.4;margin:0 0 12px}
+.doc h3{font-size:17px;margin:20px 0 8px}
+.doc p{margin:0 0 14px;font-size:14.5px;color:var(--muted)}
+.doc p b,.doc li b{color:var(--ink)}
+.tw{overflow-x:auto;margin:0 0 16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.6}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+tr:last-child>*{border-bottom:0}
+thead th{background:var(--sky-soft);font-size:12.5px;color:var(--navy)}
+:root[data-theme="dark"] thead th{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) thead th{color:var(--sky)}}
+tbody th{font-weight:700;width:34%;color:var(--ink)}
+td{color:var(--muted)}
+td small{display:block;color:var(--muted);font-size:12.3px;margin-top:3px}
+.chips{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:6px}
+.chips li{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 13px;font-size:14px;color:var(--muted)}
+.chips b{color:var(--navy);margin-right:6px;font-size:12.5px}
+:root[data-theme="dark"] .chips b{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chips b{color:var(--sky)}}
+.steps{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:8px}
+.steps li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.6;color:var(--muted)}
+.steps i{font-style:normal;flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.plain{margin:0 0 14px;padding-left:18px;font-size:14.5px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+blockquote{margin:0 0 14px;padding:13px 15px;border-left:3px solid var(--navy);background:var(--sky-soft);border-radius:0 12px 12px 0}
+:root[data-theme="dark"] blockquote{border-color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) blockquote{border-color:var(--sky)}}
+blockquote p{margin:0 0 8px;color:var(--ink)}
+blockquote p:last-child{margin:0}
+.lbl{display:block;font-size:12.5px !important;font-weight:700;color:var(--navy) !important;background:var(--sky-soft);border:1px solid var(--sky);border-radius:10px;padding:7px 11px;margin:0 0 10px !important}
+:root[data-theme="dark"] .lbl{color:var(--sky) !important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lbl{color:var(--sky) !important}}
+.lbl2{font-size:12.5px !important;font-weight:700;color:var(--navy) !important;margin:0 0 6px !important}
+:root[data-theme="dark"] .lbl2{color:var(--sky) !important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lbl2{color:var(--sky) !important}}
+.crisis{border:1.5px solid var(--navy);border-radius:14px;padding:12px 14px;background:var(--card)}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:8px;padding:0 14px}
+.faq summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:14.5px;line-height:1.5;color:var(--ink)}
+.faq details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+.faq details p{margin:0 0 12px}
+.textlink{display:inline-block;font-size:13.5px;color:var(--navy);text-underline-offset:4px;margin:2px 0 10px}
+:root[data-theme="dark"] .textlink{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .textlink{color:var(--sky)}}
+.btn.outline{border-color:var(--navy);color:var(--navy);background:transparent}
+:root[data-theme="dark"] .btn.outline{border-color:var(--sky);color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.outline{border-color:var(--sky);color:var(--sky)}}
+.doc .btn{margin-top:6px}
+.cta{display:flex;flex-direction:column;gap:10px;padding-block:30px 10px !important}
+.cta h2{text-align:center}
+.cta .textlink{text-align:center}
+.top{position:absolute}
+table.wide{min-width:600px}
+.kv{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+.kv li{font-size:13px;line-height:1.55}
+.kv b{display:inline-block;min-width:2.6em;color:var(--navy);font-size:12px}
+:root[data-theme="dark"] .kv b{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kv b{color:var(--sky)}}
+th small{font-weight:400;color:var(--muted);font-size:12px}
+.upd{color:var(--on-navy-muted);font-size:12px}
+.hint{font-size:12px !important;margin:-8px 0 14px !important}
+.sec{border-bottom:1px solid var(--line);margin-bottom:2px}
+.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 0 14px}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary h2{margin:0}
+.sec>summary::after,.sub>summary::after{content:"";flex:0 0 auto;width:9px;height:9px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);margin:-3px 4px 0 0;transition:transform .2s}
+:root[data-theme="dark"] .sec>summary::after,:root[data-theme="dark"] .sub>summary::after{border-color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sec>summary::after,:root:not([data-theme="light"]) .sub>summary::after{border-color:var(--sky)}}
+.sec[open]>summary::after,.sub[open]>summary::after{transform:rotate(-135deg);margin-top:3px}
+.sec[open]>summary{padding-bottom:12px}
+.secbody{padding-bottom:12px}
+.sub{margin:0 0 14px}
+.sub>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:700;font-size:14px;color:var(--navy);padding:4px 0 10px}
+:root[data-theme="dark"] .sub>summary{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sub>summary{color:var(--sky)}}
+.sub>summary::-webkit-details-marker{display:none}
+.sec>summary:focus-visible,.sub>summary:focus-visible,.faq summary:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+
+footer .sns{display:flex;gap:10px;justify-content:center;margin:8px 0 4px}
+footer .sns a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;text-decoration:none}
+footer .sns a:hover{border-color:var(--navy);color:var(--navy)}
+:root[data-theme="dark"] footer .sns a:hover{border-color:var(--sky);color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .sns a:hover{border-color:var(--sky);color:var(--sky)}}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.ssolwellnesshouse.com/#org", "name": "쏠 웰니스 하우스", "url": "https://www.ssolwellnesshouse.com/", "email": "contact@ssolwellness.com", "sameAs": ["https://www.instagram.com/ssol.wellness/", "https://x.com/in_the_maas", "https://www.threads.com/@ssol.wellnesshousemkt", "https://www.linkedin.com/company/ssol-wellness-house/"]}, {"@type": "WebPage", "@id": "https://www.ssolwellnesshouse.com/privacy-guide.html#page", "url": "https://www.ssolwellnesshouse.com/privacy-guide.html", "name": "쏘웰라 대화 내용과 개인정보 보호 — AI 심리상담 데이터는 어떻게 다루나요 | 쏠 웰니스 하우스", "description": "쏘웰라는 민감한 원문과 건강 관련 정보를 입력 단계에서 마스킹해 처리해요. 대화 기록 보호, 삭제·숨김, 트레이너의 열람 제한, 개인정보처리방침 안내를 쉽게 정리했어요.", "inLanguage": "ko-KR", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "isPartOf": {"@id": "https://www.ssolwellnesshouse.com/#site"}, "publisher": {"@id": "https://www.ssolwellnesshouse.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "쏠 웰니스 하우스", "item": "https://www.ssolwellnesshouse.com/"}, {"@type": "ListItem", "position": 2, "name": "쏘웰라 소개", "item": "https://www.ssolwellnesshouse.com/about.html"}, {"@type": "ListItem", "position": 3, "name": "대화 내용과 개인정보 보호", "item": "https://www.ssolwellnesshouse.com/privacy-guide.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "쏘웰라에 한 이야기와 내 정보는 어떻게 보호되나요?", "acceptedAnswer": {"@type": "Answer", "text": "민감한 원문과 건강 관련 정보는 입력 단계에서 마스킹해 처리하고, 해석과 점수 계산은 서버에서만 이뤄져요. 운영 통계는 이용자 식별 정보 없이 주 단위로 집계해요. ‘기록 지워 주세요’를 요청하면 숨김 처리되고, 계정을 삭제하면 숨긴 기록까지 실제로 삭제돼요. 12개월 이용이 없으면 숨김 처리하고 24개월 후 삭제해요."}}, {"@type": "Question", "name": "쏘웰라 대화를 다른 사람이 볼 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "대화 기록은 나만의 것이에요. 웰니스 세션을 함께하는 트레이너도 본인 동의 없이는 쏘웰라 대화를 볼 수 없어요."}}, {"@type": "Question", "name": "쏘웰라가 나를 어떻게 파악했는지 볼 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "마이페이지의 ‘쏘웰라가 파악한 내용’에서 확인하고, 맞음·아님 표시, 지우기, 전부 지우기를 할 수 있어요."}}, {"@type": "Question", "name": "기록을 지우고 싶어요. 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "쏘웰라에게 ‘기록 지워 주세요’라고 요청하면 해당 기록이 숨김 처리되고, 계정을 삭제하면 숨긴 기록까지 실제로 삭제돼요. 문의는 contact@ssolwellness.com으로 보내 주세요."}}]}]}</script>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top">
+    <a class="logo" href="/"><img src="images/mark-cream.png" alt="">쏠 웰니스 하우스</a>
+    <a class="login" href="/login.html">로그인</a>
+  </header>
+  <main>
+    <section class="phero">
+      <div class="phero-in">
+        <span class="eyebrow">Ssowella · 개인정보 보호</span>
+        <h1>쏘웰라 대화 내용과<br>개인정보 보호</h1>
+        <p>쏘웰라는 마음속 이야기를 다루는 서비스라서, 대화와 정보를 어떻게 보호하는지가 무엇보다 중요해요. 입력부터 삭제까지 어떻게 처리하는지 쉬운 말로 정리했어요.</p>
+        <small class="upd">최종 업데이트 2026년 11월 5일</small>
+      </div>
+    </section>
+    <article class="doc pad">
+<!-- 개정 약관·처리방침 시행(2026-11-25) 때 이 페이지의 보관·삭제 기간 문구를 약관과 똑같이 다시 맞춘다. 'IR의 상담 원문 비전송' 표현은 쓰지 않는다. -->
+<section>
+<h2>한눈에 보기</h2>
+<div class="tw"><table><tbody><tr><th scope="row">입력 단계</th><td>민감한 원문과 건강 관련 정보는 입력 단계에서 마스킹해 처리해요</td></tr><tr><th scope="row">해석과 점수 계산</th><td>서버에서만 이뤄져요</td></tr><tr><th scope="row">운영 통계</th><td>이용자 식별 정보 없이 주 단위로 집계해요</td></tr><tr><th scope="row">기록 삭제</th><td>‘기록 지워 주세요’를 요청하면 숨김 처리돼요</td></tr><tr><th scope="row">계정 삭제</th><td>계정을 삭제하면 숨긴 기록까지 실제로 삭제돼요</td></tr><tr><th scope="row">오래 이용하지 않으면</th><td>12개월 이용이 없으면 숨김 처리하고 24개월 후 삭제해요</td></tr><tr><th scope="row">트레이너의 열람</th><td>웰니스 세션을 함께하는 트레이너도 본인 동의 없이는 쏘웰라 대화를 볼 수 없어요</td></tr></tbody></table></div>
+</section>
+<section>
+<h2>내가 할 수 있는 일</h2>
+<ul class="plain"><li>마이페이지의 ‘쏘웰라가 파악한 내용’에서 확인하고, 맞음·아님 표시, 지우기, 전부 지우기를 할 수 있어요.</li><li>‘기록 지워 주세요’를 요청해 기록을 숨길 수 있고, 계정을 삭제하면 숨긴 기록까지 실제로 삭제돼요.</li><li>궁금한 점은 contact@ssolwellness.com으로 문의할 수 있어요.</li></ul>
+</section>
+<section>
+<h2>관련 문서</h2>
+<ul class="plain"><li><a href="/privacy.html">개인정보처리방침</a></li><li><a href="/privacy-sensitive.html">민감정보 처리방침</a></li><li><a href="/terms.html">이용약관</a></li></ul>
+</section>
+<section>
+<h2>자주 묻는 질문</h2>
+<div class="faq"><details><summary>쏘웰라에 한 이야기와 내 정보는 어떻게 보호되나요?</summary><p>민감한 원문과 건강 관련 정보는 입력 단계에서 마스킹해 처리하고, 해석과 점수 계산은 서버에서만 이뤄져요. 운영 통계는 이용자 식별 정보 없이 주 단위로 집계해요. ‘기록 지워 주세요’를 요청하면 숨김 처리되고, 계정을 삭제하면 숨긴 기록까지 실제로 삭제돼요. 12개월 이용이 없으면 숨김 처리하고 24개월 후 삭제해요.</p></details><details><summary>쏘웰라 대화를 다른 사람이 볼 수 있나요?</summary><p>대화 기록은 나만의 것이에요. 웰니스 세션을 함께하는 트레이너도 본인 동의 없이는 쏘웰라 대화를 볼 수 없어요.</p></details><details><summary>쏘웰라가 나를 어떻게 파악했는지 볼 수 있나요?</summary><p>마이페이지의 ‘쏘웰라가 파악한 내용’에서 확인하고, 맞음·아님 표시, 지우기, 전부 지우기를 할 수 있어요.</p></details><details><summary>기록을 지우고 싶어요. 어떻게 하나요?</summary><p>쏘웰라에게 ‘기록 지워 주세요’라고 요청하면 해당 기록이 숨김 처리되고, 계정을 삭제하면 숨긴 기록까지 실제로 삭제돼요. 문의는 contact@ssolwellness.com으로 보내 주세요.</p></details></div>
+</section>
+<section>
+<h2>함께 보면 좋은 안내</h2>
+<ul class="plain"><li><a href="/about.html">쏘웰라 소개</a></li><li><a href="/safety.html">안전 장치와 품질 점검</a></li><li><a href="/faq.html">자주 묻는 질문</a></li><li><a href="/team.html">만든 사람들</a></li><li><a href="/session.html">1:1 웰니스 세션</a></li><li><a href="/">쏠 웰니스 하우스 홈</a></li></ul>
+</section>
+<section class="cta">
+<h2>오늘은 어디서부터 시작해 볼까요?</h2>
+<a class="btn solid" href="https://app.ssolwellnesshouse.com/?utm_source=www&amp;utm_medium=privacy-guide">쏘웰라와 이야기하기 · 가입하면 3일 무료</a>
+<a class="btn outline" href="https://tarot.ssolwellnesshouse.com/?utm_source=www&amp;utm_medium=privacy-guide">타로 테스트 보러 가기</a>
+<a class="textlink" href="/">← 쏠 웰니스 하우스 홈으로</a>
+</section>
+<p class="about-notice">쏠 웰니스 하우스의 서비스는 의학적 진단·치료·처방을 제공하지 않으며, 전문 의료·상담을 대신하지 않습니다.</p>
+    </article>
+  </main>
+  <footer>
+    <a class="by" href="https://www.ssolwellness.com">by 쏠 웰니스 하우스</a>
+    <div class="sns" aria-label="쏠 웰니스 하우스 SNS"><a href="https://www.instagram.com/ssol.wellness/" target="_blank" rel="me noopener noreferrer" aria-label="인스타그램" title="인스타그램"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://x.com/in_the_maas" target="_blank" rel="me noopener noreferrer" aria-label="X(트위터)" title="X(트위터)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="https://www.threads.com/@ssol.wellnesshousemkt" target="_blank" rel="me noopener noreferrer" aria-label="스레드" title="스레드"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9.2C18.2 5.6 15.7 3.6 12 3.6 7.6 3.6 4.9 6.7 4.9 12s2.7 8.4 7.1 8.4c3.6 0 6-1.7 6-4.2 0-2.1-1.7-3.3-4.3-3.4-3-.1-4.5 1-4.4 2.5.1 1.3 1.3 2 2.7 1.9 2.3-.1 3.5-1.9 3.5-5.3 0-2.600-1.800-4-4.300-4-1.700 0-3 .6-3.800 1.800"/></svg></a><a href="https://www.linkedin.com/company/ssol-wellness-house/" target="_blank" rel="me noopener noreferrer" aria-label="링크드인" title="링크드인"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+    <div class="links"><a href="/safety.html">안전 장치</a><span>·</span><a href="/faq.html">자주 묻는 질문</a><span>·</span><a href="/team.html">만든 사람들</a><span>·</span><a href="/session.html">웰니스 세션</a><span>·</span><a href="/privacy-guide.html">개인정보 보호</a></div>
+    <div class="links"><a href="/privacy.html">개인정보처리방침</a><span>·</span><a href="/terms.html">이용약관</a><span>·</span><a href="/privacy-sensitive.html">민감정보 처리방침</a></div>
+    <div>쏠 웰니스 하우스의 서비스는 의학적 진단·치료·처방을 제공하지 않으며, 전문 의료·상담을 대신하지 않습니다.</div>
+    <div>쏠 웰니스 하우스 · 대표 김준석 · 사업자등록번호 572-07-03549 · 통신판매업신고번호 2026-서울마포-2770</div>
+    <div>서울시 마포구 독막로 100 4층 408호 · 연락처 010-2835-2263</div>
+  </footer>
+</div>
+</body>
+</html>
