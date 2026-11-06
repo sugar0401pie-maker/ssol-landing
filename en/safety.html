@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- SSOL Wellness House — English /en/safety.html · v1 · 2026-11-06 · 한국어 safety.html(11/06)과 같은 구조 -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Sowella AI safety and quality checks — how it handles a crisis | SSOL Wellness House</title>
+<meta name="description" content="How Sowella AI&#x27;s safety router handles warning signs, crisis lines by country, our internal evaluation results and limits, and what it doesn&#x27;t do.">
+<link rel="canonical" href="https://www.ssolwellnesshouse.com/en/safety.html">
+<meta name="robots" content="noindex, nofollow">
+<!-- 영문판 공개 전 임시 설정: 정식 공개(기획 확인 완료) 때 위 robots 줄을 지운다. -->
+<link rel="alternate" hreflang="ko" href="https://www.ssolwellnesshouse.com/safety.html">
+<link rel="alternate" hreflang="en" href="https://www.ssolwellnesshouse.com/en/safety.html">
+<link rel="alternate" hreflang="x-default" href="https://www.ssolwellnesshouse.com/en/safety.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="SSOL Wellness House">
+<meta property="og:title" content="Sowella AI safety and quality checks — how it handles a crisis | SSOL Wellness House">
+<meta property="og:description" content="How Sowella AI&#x27;s safety router handles warning signs, crisis lines by country, our internal evaluation results and limits, and what it doesn&#x27;t do.">
+<meta property="og:url" content="https://www.ssolwellnesshouse.com/en/safety.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#033667; --navy-deep:#022447; --sky:#A9C4D9; --sky-soft:#E3EDF4;
+  --page:#E9EFF4; --ground:#FFFFFF; --ink:#0F1E2C; --muted:#4E5D6B; --line:#D5E1EA; --card:#FFFFFF;
+  --on-navy:#F2F6FA; --on-navy-muted:#B3C6D6;
+  --serif:'Gowun Batang','Nanum Myeongjo',serif;
+  --sans:'Noto Sans KR',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding:0;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap:balance;margin:0}
+
+.app{max-width:430px;margin:0 auto;background:var(--ground);box-shadow:0 0 0 1px var(--line),0 20px 60px rgba(3,54,103,.12);position:relative}
+@media (min-width:600px){.app{margin-block:24px;border-radius:28px;overflow:hidden}}
+.pad{padding-inline:20px}
+
+.eyebrow{font-size:11.5px;letter-spacing:1.8px;font-weight:700;text-transform:uppercase}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;padding:0 14px;text-align:center;border-radius:14px;font-weight:700;font-size:15.5px;text-decoration:none;border:1.5px solid transparent}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.btn.solid{background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy)}
+.btn.ghost-l{border-color:rgba(255,255,255,.55);color:#fff}
+.stack{display:flex;flex-direction:column;gap:10px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;justify-content:space-between;height:62px;padding-inline:18px}
+.logo{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.logo img{width:34px}
+.login{font-size:13px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:5px 12px;border-radius:99px}
+
+footer{padding:28px 20px 36px;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.8;display:flex;flex-direction:column;align-items:center;gap:2px}
+footer .by{color:var(--navy);text-decoration:underline;text-underline-offset:3px;font-size:13px}
+:root[data-theme="dark"] footer .by{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .by{color:var(--sky)}}
+footer .links{margin:4px 0;display:flex;gap:6px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+footer .links a{text-underline-offset:3px}
+footer .links .hl{font-weight:700;color:var(--ink)}
+footer .disc{max-width:360px;margin:8px 0 6px;font-size:11.5px;line-height:1.6}
+/* ssowella page */
+.phero{background:linear-gradient(180deg,#0A3D6E 0%,var(--navy) 100%);color:#fff;padding:96px 20px 44px}
+.phero-in{display:flex;flex-direction:column;gap:16px}
+.phero .eyebrow{color:var(--sky)}
+.phero h1{font-size:29px;line-height:1.32}
+.phero p{margin:0;font-size:14.5px;color:var(--on-navy-muted)}
+.phero p b{color:#fff;font-weight:700}
+.doc{padding-block:8px 40px}
+.doc section{padding-block:26px 6px}
+.doc h2{font-size:22px;line-height:1.35;margin:0 0 12px}
+.doc h3{font-size:17px;margin:20px 0 8px}
+.doc p{margin:0 0 14px;font-size:14.5px;color:var(--muted)}
+.doc p b,.doc li b{color:var(--ink)}
+.tw{overflow-x:auto;margin:0 0 16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.55}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+tr:last-child>*{border-bottom:0}
+thead th{background:var(--sky-soft);font-size:12.5px;color:var(--navy)}
+:root[data-theme="dark"] thead th{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) thead th{color:var(--sky)}}
+tbody th{font-weight:700;width:34%;color:var(--ink)}
+td{color:var(--muted)}
+td small{display:block;color:var(--muted);font-size:12.3px;margin-top:3px}
+.chips{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:6px}
+.chips li{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 13px;font-size:14px;color:var(--muted)}
+.chips b{color:var(--navy);margin-right:6px;font-size:12.5px}
+:root[data-theme="dark"] .chips b{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chips b{color:var(--sky)}}
+.steps{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:8px}
+.steps li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.6;color:var(--muted)}
+.steps i{font-style:normal;flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.plain{margin:0 0 14px;padding-left:18px;font-size:14.5px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+blockquote{margin:0 0 14px;padding:13px 15px;border-left:3px solid var(--navy);background:var(--sky-soft);border-radius:0 12px 12px 0}
+:root[data-theme="dark"] blockquote{border-color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) blockquote{border-color:var(--sky)}}
+blockquote p{margin:0 0 8px;color:var(--ink)}
+blockquote p:last-child{margin:0}
+.lbl{display:block;font-size:12.5px !important;font-weight:700;color:var(--navy) !important;background:var(--sky-soft);border:1px solid var(--sky);border-radius:10px;padding:7px 11px;margin:0 0 10px !important}
+:root[data-theme="dark"] .lbl{color:var(--sky) !important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lbl{color:var(--sky) !important}}
+.lbl2{font-size:12.5px !important;font-weight:700;color:var(--navy) !important;margin:0 0 6px !important}
+:root[data-theme="dark"] .lbl2{color:var(--sky) !important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lbl2{color:var(--sky) !important}}
+.crisis{border:1.5px solid var(--navy);border-radius:14px;padding:12px 14px;background:var(--card)}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:8px;padding:0 14px}
+.faq summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:14.5px;line-height:1.5;color:var(--ink)}
+.faq details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+.faq details p{margin:0 0 12px}
+.textlink{display:inline-block;font-size:13.5px;color:var(--navy);text-underline-offset:4px;margin:2px 0 10px}
+:root[data-theme="dark"] .textlink{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .textlink{color:var(--sky)}}
+.btn.outline{border-color:var(--navy);color:var(--navy);background:transparent}
+:root[data-theme="dark"] .btn.outline{border-color:var(--sky);color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.outline{border-color:var(--sky);color:var(--sky)}}
+.doc .btn{margin-top:6px}
+.cta{display:flex;flex-direction:column;gap:10px;padding-block:30px 10px !important}
+.cta h2{text-align:center}
+.cta .textlink{text-align:center}
+.top{position:absolute}
+table.wide{min-width:600px}
+.kv{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+.kv li{font-size:13px;line-height:1.55}
+.kv b{display:inline-block;min-width:2.6em;color:var(--navy);font-size:12px;margin-right:4px}
+:root[data-theme="dark"] .kv b{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kv b{color:var(--sky)}}
+th small{font-weight:400;color:var(--muted);font-size:12px}
+.upd{color:var(--on-navy-muted);font-size:12px}
+.hint{font-size:12px !important;margin:-8px 0 14px !important}
+.sec{border-bottom:1px solid var(--line);margin-bottom:2px}
+.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 0 14px}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary h2{margin:0}
+.sec>summary::after,.sub>summary::after{content:"";flex:0 0 auto;width:9px;height:9px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);margin:-3px 4px 0 0;transition:transform .2s}
+:root[data-theme="dark"] .sec>summary::after,:root[data-theme="dark"] .sub>summary::after{border-color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sec>summary::after,:root:not([data-theme="light"]) .sub>summary::after{border-color:var(--sky)}}
+.sec[open]>summary::after,.sub[open]>summary::after{transform:rotate(-135deg);margin-top:3px}
+.sec[open]>summary{padding-bottom:12px}
+.secbody{padding-bottom:12px}
+.sub{margin:0 0 14px}
+.sub>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:700;font-size:14px;color:var(--navy);padding:4px 0 10px}
+:root[data-theme="dark"] .sub>summary{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sub>summary{color:var(--sky)}}
+.sub>summary::-webkit-details-marker{display:none}
+.sec>summary:focus-visible,.sub>summary:focus-visible,.faq summary:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+
+footer .sns{display:flex;gap:10px;justify-content:center;margin:8px 0 4px}
+footer .sns a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;text-decoration:none}
+footer .sns a:hover{border-color:var(--navy);color:var(--navy)}
+:root[data-theme="dark"] footer .sns a:hover{border-color:var(--sky);color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .sns a:hover{border-color:var(--sky);color:var(--sky)}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://www.ssolwellnesshouse.com/#org", "name": "SSOL Wellness House", "alternateName": "쏠 웰니스 하우스", "url": "https://www.ssolwellnesshouse.com/en/", "email": "contact@ssolwellness.com", "sameAs": ["https://www.instagram.com/ssol.wellness/", "https://x.com/in_the_maas", "https://www.threads.com/@ssol.wellnesshousemkt", "https://www.linkedin.com/company/ssol-wellness-house/"], "address": {"@type": "PostalAddress", "streetAddress": "Room 408, 4F, 100 Dongmak-ro", "addressLocality": "Mapo-gu", "addressRegion": "Seoul", "addressCountry": "KR"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.ssolwellnesshouse.com/en/safety.html#page", "url": "https://www.ssolwellnesshouse.com/en/safety.html", "name": "Sowella AI safety and quality checks — how it handles a crisis | SSOL Wellness House", "description": "How Sowella AI's safety router handles warning signs, crisis lines by country, our internal evaluation results and limits, and what it doesn't do.", "inLanguage": "en", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "isPartOf": {"@id": "https://www.ssolwellnesshouse.com/#site"}, "publisher": {"@id": "https://www.ssolwellnesshouse.com/#org"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can Sowella AI miss a crisis?", "acceptedAnswer": {"@type": "Answer", "text": "Every message goes through the safety router first, and it decides using 36 safety signals and 187 safety rules. When we tested 44 safety-related prompts, a suggestion came out without the required safety guidance 0 times (internal evaluation). Still, no system can catch every situation perfectly. If you're in danger right now, please call your local emergency number or a crisis line such as 988 (US & Canada), 116 123 (UK & Ireland) or 13 11 14 (Australia), or find one at findahelpline.com."}}, {"@type": "Question", "name": "How accurate is Sowella AI?", "acceptedAnswer": {"@type": "Answer", "text": "In topic-based simulated chats built from real user conversations, Sowella AI's first hunch about the reason was right 97.4% and 98.3% of the time, and it told apart two easily confused reasons 97.0% of the time. These are internal SSOL Wellness House results, not an external certification, so real chats may differ. That's why Sowella AI doesn't jump to conclusions: it asks, “It sounds like… does that fit?” so you can confirm for yourself."}}, {"@type": "Question", "name": "What does “internal evaluation” mean?", "acceptedAnswer": {"@type": "Answer", "text": "It means SSOL Wellness House tested Sowella AI's coaching engine on topic-based simulated conversations built from real user chats. It isn't an external certification or a measure of clinical effect, and it was measured with models from the same family. We plan to recalibrate once we pass 500 users."}}, {"@type": "Question", "name": "Can I use Sowella AI when things feel really hard?", "acceptedAnswer": {"@type": "Answer", "text": "Every conversation passes through the safety router first. If there are signs that you may need medical or clinical care, such as a threat to your safety or very deep distress, Sowella AI stops coaching and points you to professional services. If you're in danger right now, please don't rely on Sowella AI. Call your local emergency number or a crisis line for your country, or find one at findahelpline.com."}}, {"@type": "Question", "name": "Does Sowella AI replace a doctor or therapy?", "acceptedAnswer": {"@type": "Answer", "text": "No. Sowella AI is wellness coaching that's closer to everyday life than clinical care, and it doesn't provide medical diagnosis, treatment or prescriptions. If symptoms last or daily life feels hard, we recommend seeing a mental health professional, such as a psychiatrist, psychologist or licensed counselor where you live."}}, {"@type": "Question", "name": "I got a reply that felt wrong. What should I do?", "acceptedAnswer": {"@type": "Answer", "text": "You can report it or raise a concern from the Help tab in your Profile, or at contact@ssolwellness.com."}}]}</script>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="top">
+    <a class="logo" href="/en/"><img src="/images/mark-cream.png" alt="">SSOL Wellness House</a>
+  </header>
+  <main>
+    <section class="phero">
+      <div class="phero-in">
+        <span class="eyebrow">Sowella AI · Safety and quality</span>
+        <h1>How Sowella AI stays safe,<br>and how we check its quality</h1>
+        <p>Sowella AI is SSOL Wellness House's wellness coaching chat. It deals with everyday worries, not diagnosis or treatment, so we've put how it watches for warning signs and how we check its quality in one place. Every figure below is an <b>internal SSOL Wellness House evaluation</b>.</p>
+        <small class="upd">Last updated November 6, 2026</small>
+      </div>
+    </section>
+    <article class="doc pad">
+<section>
+<h2>At a glance</h2>
+<div class="tw"><table><tbody><tr><th scope="row">Safety check</th><td>Every message goes through a “safety router” first</td></tr><tr><th scope="row">What it checks</th><td>36 safety signals and 187 safety rules</td></tr><tr><th scope="row">If a crisis is suspected</th><td>It doesn't score or coach. It goes straight to crisis resources</td></tr><tr><th scope="row">Crisis lines</th><td>Shown for the country you're in, e.g. 988 (US &amp; Canada), 116 123 (UK &amp; Ireland), 13 11 14 (Australia), 14416 (India), or findahelpline.com</td></tr><tr><th scope="row">Quality checks</th><td>Internal SSOL Wellness House evaluation (not an external certification)</td></tr><tr><th scope="row">What it doesn't do</th><td>Medical diagnosis, treatment, prescriptions or emergency response</td></tr></tbody></table></div>
+</section>
+<section>
+<h2>What the safety router does</h2>
+<p>Every conversation passes through the “safety router” first. It's designed not to mistake everyday phrases for a crisis, while never missing real warning signs.</p><div class="tw"><table><thead><tr><th scope="col">If you say…</th><th scope="col">Sowella AI…</th></tr></thead><tbody><tr><td>An everyday phrase like “I just want to quit everything”</td><td>Asks what happened before showing crisis resources, and keeps track of whether it repeats.</td></tr><tr><td>Hints about death, repeated in the same chat</td><td>Asks once whether you're thinking about death, and if so, shows crisis resources.</td></tr><tr><td>“I want to die,” “I want to disappear”</td><td>Shows crisis resources right away, without asking first.</td></tr><tr><td>Talks about violence or being controlled</td><td>Points you to domestic violence and emergency services, and never suggests things like “try talking it out.”</td></tr><tr><td>“I keep waking up at 4 a.m. lately”</td><td>Suggests a gentle place to start instead of an active step.</td></tr></tbody></table></div><p>It decides based on 36 safety signals and 187 safety rules, and if a crisis is suspected, it skips scoring and goes straight to crisis resources. In the app, if you type a high-risk message, you'll see crisis lines for your country instead of a reply.</p>
+</section>
+<section>
+<h2>If you're in crisis</h2>
+<p class="crisis"><b>If you're in danger right now,</b> please don't rely on Sowella AI. Call your local emergency number, or reach a crisis line: <b>988</b> (US &amp; Canada), <b>116 123</b> (UK &amp; Ireland), <b>13 11 14</b> (Australia), <b>1737</b> (New Zealand), <b>14416</b> (India), or find one near you at <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a>. If you're facing violence or control at home, contact a local domestic violence helpline or emergency services.</p>
+</section>
+<section>
+<h2>Quality checks (internal evaluation)</h2>
+<p>The figures below come from SSOL Wellness House testing Sowella AI's coaching engine <b>on topic-based simulated conversations built from real user chats</b>. They are internal results, not an external certification or a measure of clinical effect. Your real experience may differ.</p><div class="tw"><table><thead><tr><th scope="col">What we checked</th><th scope="col">Result</th><th scope="col">What it measures</th></tr></thead><tbody><tr><td>Top-hunch accuracy</td><td>97.4% · 98.3%</td><td>How often Sowella AI's first hunch about the reason was right, in topic-based simulated chats</td></tr><tr><td>Telling look-alikes apart</td><td>97.0%</td><td>How often it correctly told apart two reasons that are easy to confuse</td></tr><tr><td>Card path simulation</td><td>95%+ match on key scenes</td><td>Results of simulating 1,152 card paths, scene by scene</td></tr><tr><td>Safety misses</td><td>0/44</td><td>Out of 44 safety-related prompts, the number of times a suggestion came out without the required safety guidance: 0 (a check that the safety filter works)</td></tr></tbody></table></div><p>These figures were measured with models from the same family, on Korean-language conversations. We'll run the same checks on English conversations, and we plan to recalibrate once we pass 500 users.</p>
+</section>
+<section>
+<h2>What Sowella AI doesn't do</h2>
+<ul class="plain"><li>It doesn't diagnose, treat or prescribe. It doesn't replace a doctor, psychotherapy or counseling.</li><li>It isn't an emergency or crisis service.</li><li>It doesn't assume things you haven't said. It only works with what you've confirmed.</li><li>If SSOL isn't the right fit for what you're facing, we'll point you to a better-suited service.</li></ul>
+</section>
+<section>
+<h2>What you can do</h2>
+<ul class="plain"><li>If you get a reply that feels wrong, report it or raise a concern from the Help tab in your Profile, or at contact@ssolwellness.com.</li><li>In “What Sowella has noticed” in your Profile, you can see how Sowella AI understands you, mark each item right or wrong, delete items, or delete them all.</li></ul>
+</section>
+<section>
+<h2>Frequently asked questions</h2>
+<div class="faq"><details><summary>Can Sowella AI miss a crisis?</summary><p>Every message goes through the safety router first, and it decides using 36 safety signals and 187 safety rules. When we tested 44 safety-related prompts, a suggestion came out without the required safety guidance 0 times (internal evaluation). Still, no system can catch every situation perfectly. If you're in danger right now, please call your local emergency number or a crisis line such as 988 (US &amp; Canada), 116 123 (UK &amp; Ireland) or 13 11 14 (Australia), or find one at findahelpline.com.</p></details><details><summary>How accurate is Sowella AI?</summary><p>In topic-based simulated chats built from real user conversations, Sowella AI's first hunch about the reason was right 97.4% and 98.3% of the time, and it told apart two easily confused reasons 97.0% of the time. These are internal SSOL Wellness House results, not an external certification, so real chats may differ. That's why Sowella AI doesn't jump to conclusions: it asks, “It sounds like… does that fit?” so you can confirm for yourself.</p></details><details><summary>What does “internal evaluation” mean?</summary><p>It means SSOL Wellness House tested Sowella AI's coaching engine on topic-based simulated conversations built from real user chats. It isn't an external certification or a measure of clinical effect, and it was measured with models from the same family. We plan to recalibrate once we pass 500 users.</p></details><details><summary>Can I use Sowella AI when things feel really hard?</summary><p>Every conversation passes through the safety router first. If there are signs that you may need medical or clinical care, such as a threat to your safety or very deep distress, Sowella AI stops coaching and points you to professional services. If you're in danger right now, please don't rely on Sowella AI. Call your local emergency number or a crisis line for your country, or find one at findahelpline.com.</p></details><details><summary>Does Sowella AI replace a doctor or therapy?</summary><p>No. Sowella AI is wellness coaching that's closer to everyday life than clinical care, and it doesn't provide medical diagnosis, treatment or prescriptions. If symptoms last or daily life feels hard, we recommend seeing a mental health professional, such as a psychiatrist, psychologist or licensed counselor where you live.</p></details><details><summary>I got a reply that felt wrong. What should I do?</summary><p>You can report it or raise a concern from the Help tab in your Profile, or at contact@ssolwellness.com.</p></details></div>
+</section>
+<section>
+<h2>You might also like</h2>
+<ul class="plain"><li><a href="/en/about.html">About Sowella AI</a></li><li><a href="/en/faq.html">FAQ</a></li><li><a href="/en/team.html">Our team</a></li><li><a href="/en/session.html">1:1 wellness sessions</a></li><li><a href="/en/privacy-guide.html">Your chats and your privacy</a></li><li><a href="/en/">SSOL Wellness House home</a></li></ul>
+</section>
+<section class="cta">
+<h2>Where would you like to start today?</h2>
+<a class="btn solid" href="https://app.ssolwellnesshouse.com/en?utm_source=www_en&amp;utm_medium=safety">Talk with Sowella AI · 3 days free when you sign up</a>
+<a class="btn outline" href="https://tarot.ssolwellnesshouse.com/en?utm_source=www_en&amp;utm_medium=safety">Try a tarot reading</a>
+<a class="textlink" href="/en/">← Back to SSOL Wellness House</a>
+</section>
+<p class="about-notice">SSOL Wellness House offers non-clinical wellness coaching and wellness sessions. We don't provide psychotherapy, diagnosis or medical treatment, and our services don't replace professional medical care or counseling.</p>
+    </article>
+
+  </main>
+
+  <footer>
+    <a class="by" href="https://www.ssolwellness.com">by SSOL Wellness House</a>
+    <div class="sns" aria-label="SSOL Wellness House on social media"><a href="https://www.instagram.com/ssol.wellness/" target="_blank" rel="me noopener noreferrer" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a><a href="https://x.com/in_the_maas" target="_blank" rel="me noopener noreferrer" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a href="https://www.threads.com/@ssol.wellnesshousemkt" target="_blank" rel="me noopener noreferrer" aria-label="Threads" title="Threads"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9.2C18.2 5.6 15.7 3.6 12 3.6 7.6 3.6 4.9 6.7 4.9 12s2.7 8.4 7.1 8.4c3.6 0 6-1.7 6-4.2 0-2.1-1.7-3.3-4.3-3.4-3-.1-4.5 1-4.4 2.5.1 1.3 1.3 2 2.7 1.9 2.3-.1 3.5-1.9 3.5-5.3 0-2.6-1.8-4-4.3-4-1.7 0-3 .6-3.8 1.8"></path></svg></a><a href="https://www.linkedin.com/company/ssol-wellness-house/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a></div>
+    <p class="disc">SSOL Wellness House offers non-clinical wellness coaching and wellness sessions. We don't provide psychotherapy, diagnosis or medical treatment. Our services are for adults 18 and over. If you're in crisis, please contact your local emergency number or find a helpline at <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a>.</p>
+    <div class="links"><a href="/en/safety.html">Safety</a><span>·</span><a href="/en/faq.html">FAQ</a><span>·</span><a href="/en/team.html">Our team</a><span>·</span><a href="/en/session.html">Wellness sessions</a><span>·</span><a href="/en/about.html">About Sowella AI</a><span>·</span><a href="/en/privacy-guide.html">Your chats and privacy</a></div>
+    <div class="links"><a href="/en/terms.html">Terms of Use</a><span>·</span><a href="/en/privacy.html">Privacy Policy</a><span>·</span><a class="hl" href="/en/consumer-health-data.html">Consumer Health Data Privacy Policy</a><span>·</span><a href="/en/cookies.html">Cookie Policy</a><span>·</span><a href="/en/refund.html">Refund Policy</a></div>
+    <div>SSOL Wellness House · Representative: Junseok Kim · Business registration no. 572-07-03549 · Mail-order business registration no. 2026-Seoul Mapo-2770</div>
+    <div>Room 408, 4F, 100 Dongmak-ro, Mapo-gu, Seoul, Republic of Korea · Contact number +82-10-2835-2263 · <a href="mailto:contact@ssolwellness.com">contact@ssolwellness.com</a></div>
+  </footer>
+</div>
+<script src="/lang-toggle.js" defer></script>
+</body>
+</html>

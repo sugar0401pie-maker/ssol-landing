@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- SSOL Wellness House — English landing (/en) · v1.2 · 2026-11-06 (한국어판 11/06 레이아웃과 1:1 + KOR/ENG 스위치)
+     배포 위치: https://www.ssolwellnesshouse.com/en/ (index.html)
+     이미지는 미리보기용으로 절대 경로를 썼어요. 배포 때 /images/... 로 바꿔도 돼요. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>SSOL Wellness House — Wellness tests, Sowella AI and wellness sessions</title>
+<meta name="description" content="Try a short wellness test, chat with Sowella AI, or book a 1:1 session with a mental wellness trainer. Non-clinical wellness coaching, not therapy.">
+<link rel="canonical" href="https://www.ssolwellnesshouse.com/en/">
+<meta name="robots" content="noindex, nofollow">
+<!-- 영문판 공개 전 임시 설정: 정식 공개(기획 확인 완료) 때 위 robots 줄을 지운다. -->
+<link rel="alternate" hreflang="ko" href="https://www.ssolwellnesshouse.com/">
+<link rel="alternate" hreflang="en" href="https://www.ssolwellnesshouse.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.ssolwellnesshouse.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="SSOL Wellness House">
+<meta property="og:title" content="SSOL Wellness House">
+<meta property="og:description" content="Try a short wellness test, chat with Sowella AI, or book a 1:1 session with a mental wellness trainer. Non-clinical wellness coaching, not therapy.">
+<meta property="og:url" content="https://www.ssolwellnesshouse.com/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#033667; --navy-deep:#022447; --sky:#A9C4D9; --sky-soft:#E3EDF4;
+  --page:#E9EFF4; --ground:#FFFFFF; --ink:#0F1E2C; --muted:#4E5D6B; --line:#D5E1EA; --card:#FFFFFF;
+  --on-navy:#F2F6FA; --on-navy-muted:#B3C6D6;
+  --serif:'Gowun Batang','Nanum Myeongjo',serif;
+  --sans:'Noto Sans KR',system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --page:#070F17; --ground:#0B1824; --ink:#E7EEF4; --muted:#A5B6C5; --line:#23384B; --card:#11222F; --sky-soft:#132838; color-scheme:dark; }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.65;padding:0;overflow-wrap:break-word}
+img{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.3px;text-wrap:balance;margin:0}
+
+.app{max-width:430px;margin:0 auto;background:var(--ground);box-shadow:0 0 0 1px var(--line),0 20px 60px rgba(3,54,103,.12);position:relative}
+@media (min-width:600px){.app{margin-block:24px;border-radius:28px;overflow:hidden}}
+.pad{padding-inline:20px}
+
+.eyebrow{font-size:11.5px;letter-spacing:1.8px;font-weight:700;text-transform:uppercase}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;padding:0 14px;text-align:center;border-radius:14px;font-weight:700;font-size:15.5px;text-decoration:none;border:1.5px solid transparent}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.btn.solid{background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy)}
+.btn.ghost-l{border-color:rgba(255,255,255,.55);color:#fff}
+.btn.gold{background:#C9B47E;color:#0B1B3A}
+.stack{display:flex;flex-direction:column;gap:10px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;justify-content:space-between;height:62px;padding-inline:18px}
+.logo{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.logo img{width:34px}
+.lang{font-size:13px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:5px 12px;border-radius:99px}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,#0A3D6E 0%,var(--navy) 60%,#0B4A80 100%);color:#fff;overflow:hidden}
+.hero-in{position:relative;z-index:2;padding:108px 20px 96px;display:flex;flex-direction:column;gap:18px}
+.hero .eyebrow{color:var(--sky)}
+#headline{font-size:30px;line-height:1.3;min-height:2.6em;transition:opacity .4s}
+.lead{margin:0;font-size:15px;color:var(--on-navy-muted)}
+.lead b{color:#fff;font-weight:500}
+.hero .sub{font-size:13.5px;color:var(--on-navy-muted);text-align:center}
+.hero .sub a{color:#fff;text-underline-offset:4px}
+.hero-mark{position:absolute;right:-70px;top:70px;width:300px;opacity:.07;z-index:1;pointer-events:none}
+.waves{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:64px;z-index:1;display:block}
+
+/* why */
+.why{padding-block:40px 36px;background:var(--ground)}
+.why h2{font-size:25px;line-height:1.35;margin:8px 0 10px}
+.why>p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+.cmp{display:flex;flex-direction:column;gap:8px}
+.cmp div{border:1px solid var(--line);border-radius:14px;padding:13px 15px;background:var(--card)}
+.cmp b{display:block;font-size:14.5px}
+.cmp em{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#2F5D9A}
+.cmp small{display:block;font-size:13px;color:var(--muted);line-height:1.6;margin-top:2px}
+.cmp .us{background:var(--navy);border-color:var(--navy);color:#fff}
+.cmp .us em{color:var(--sky)}
+.cmp .us small{color:var(--on-navy-muted)}
+
+/* ladder */
+.ladder{padding-block:36px 8px}
+.ladder h2{font-size:25px;line-height:1.35}
+.ladder p{margin:10px 0 18px;color:var(--muted);font-size:14.5px}
+.depth{display:flex;flex-direction:column;gap:8px}
+.depth a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:13px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+.depth .n{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:0 0 auto}
+.depth .d1 .n{background:var(--sky-soft);color:var(--navy)}
+.depth .d2 .n{background:var(--sky);color:var(--navy)}
+.depth .d3 .n{background:var(--navy);color:#fff}
+.depth b{display:block;font-size:15px;line-height:1.4}
+.depth small{display:block;font-size:12.5px;color:var(--muted)}
+
+/* steps */
+.step{padding-block:44px}
+.step .eyebrow{color:var(--navy)}
+:root[data-theme="dark"] .s1 .eyebrow,:root[data-theme="dark"] .s2 .eyebrow{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .s1 .eyebrow,:root:not([data-theme="light"]) .s2 .eyebrow{color:var(--sky)}}
+.step h2{font-size:26px;line-height:1.35;margin:8px 0 12px}
+.step p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+.s2{background:var(--sky-soft)}
+.s3{background:var(--navy);color:var(--on-navy)}
+.s3 .eyebrow{color:var(--sky)}
+.s3 p{color:var(--on-navy-muted)}
+
+/* 화면 미리보기(가로로 넘기는 스크린샷 줄) */
+.step p.shot-t{font-size:16px;font-family:var(--serif);font-weight:700;color:var(--ink);margin:28px 0 2px}
+.step p.shot-hint{font-size:12px;color:var(--muted);margin:0 0 6px}
+.shotrow{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -20px 8px;padding:4px 20px 14px;scroll-padding-inline:20px;scrollbar-width:none}
+.shotrow::-webkit-scrollbar{display:none}
+.shotrow:focus-visible{outline:3px solid var(--sky);outline-offset:-3px;border-radius:12px}
+.shotrow figure{margin:0;flex:0 0 56%;max-width:230px;scroll-snap-align:start}
+.shotrow img{display:block;width:100%;height:auto;border-radius:20px;border:1px solid var(--line);box-shadow:0 10px 26px rgba(3,54,103,.14);background:#fff}
+.shotrow figcaption{font-size:12.3px;color:var(--muted);line-height:1.5;margin-top:8px;text-align:center}
+/* test cards */
+.tests{display:flex;flex-direction:column;gap:16px}
+.tcard{border-radius:20px;overflow:hidden;box-shadow:0 14px 36px rgba(3,54,103,.14);background:var(--card);border:1px solid var(--line)}
+.tcard a.img{display:block}
+.tcard img{display:block;width:100%;aspect-ratio:4/4.2;object-fit:cover}
+.tcard .tb{padding:14px 16px 16px}
+.tcard .tb b{display:block;font-size:17px;font-family:var(--serif);line-height:1.35}
+.tcard .tb small{display:block;font-size:13px;color:var(--muted);margin:4px 0 12px;line-height:1.6}
+.tcard .meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tcard .meta span{font-size:11.5px;padding:3px 9px;border-radius:99px;background:var(--sky-soft);color:var(--navy);font-weight:500}
+.tcard.night{background:#0B1B3A;border-color:#0B1B3A;color:#fff}
+.tcard.night small{color:#B3C6D6}
+.tcard.night .meta span{background:rgba(201,180,120,.2);color:#E9D9A6}
+.tcard .fine{display:block;font-size:11.5px;color:#B3C6D6;margin:8px 0 0;text-align:center}
+.report{margin:-2px 0 12px;padding:11px 13px;border-radius:12px;background:var(--sky-soft)}
+.report b{display:block;font-size:13.5px !important;font-family:var(--sans) !important;color:var(--navy)}
+.report small{display:block;font-size:12.3px;color:var(--muted);margin:2px 0 0 !important;line-height:1.55}
+.btn.off{background:var(--sky-soft);color:var(--muted);cursor:default}
+.new{display:inline-block;font:700 10px/1 var(--sans);letter-spacing:.5px;background:#E4572E;color:#fff;border-radius:99px;padding:3px 7px;vertical-align:3px;margin-left:6px}
+
+.soonlist{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.soon{border:1.5px dashed var(--line);border-radius:18px;padding:16px;display:flex;gap:14px;align-items:center;background:var(--card)}
+.soon .ic{width:52px;height:52px;border-radius:14px;background:var(--sky-soft);display:flex;align-items:center;justify-content:center;flex:0 0 auto;color:var(--navy)}
+:root[data-theme="dark"] .soon .ic{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .soon .ic{color:var(--sky)}}
+.soon b{display:block;font-size:14.5px;line-height:1.45}
+.soon small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--navy);color:#fff;margin-bottom:4px}
+
+/* chat mockup */
+.chat{border-radius:22px;background:#fff;box-shadow:0 14px 36px rgba(3,54,103,.14);overflow:hidden;color:#0F1E2C;border:1px solid #D5E1EA;margin-bottom:20px}
+.chat .h{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #DDE6EE;font-size:14px;font-weight:500}
+.chat .h span{font-size:12px;border:1px solid #D5E1EA;border-radius:99px;padding:3px 9px}
+.chat .b{padding:14px;display:flex;flex-direction:column;gap:9px;font-size:13.5px;line-height:1.55}
+.bub{max-width:85%;padding:9px 13px;border-radius:15px}
+.ai{background:#E6EDF5;align-self:flex-start}
+.me{background:var(--navy);color:#fff;align-self:flex-end}
+.chat .f{display:flex;gap:5px;padding:9px 10px 12px;border-top:1px solid #DDE6EE;align-items:center}
+.chat .f .in{flex:1;min-width:0;height:38px;border-radius:13px;border:1px solid #D5E1EA;background:#F4F8FB;font-size:12.5px;color:#8395A5;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:36px}
+.chat .f .rb{height:38px;border-radius:13px;border:1px solid #D5E1EA;font-size:12px;padding:0 9px;display:flex;align-items:center;font-weight:500;white-space:nowrap}
+.chat .f .sb{height:38px;border-radius:13px;background:var(--navy);color:#fff;font-size:12px;padding:0 11px;display:flex;align-items:center;font-weight:500;white-space:nowrap}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 18px}
+.stats div{background:#fff;border-radius:14px;padding:12px 6px;text-align:center;border:1px solid #D5E1EA;color:#0F1E2C}
+.stats b{display:block;font-family:var(--serif);font-size:24px;color:var(--navy);line-height:1.2}
+.stats span{display:block;font-size:11.5px;color:#4E5D6B;line-height:1.4;margin-top:2px}
+.subh{font-size:16.5px;font-family:var(--serif);font-weight:700;margin:22px 0 10px}
+.cap{font-size:12.5px !important;color:var(--muted) !important;line-height:1.6;margin:-8px 0 18px !important}
+.flow4{list-style:none;margin:0 0 6px;padding:0;display:flex;flex-direction:column;gap:6px}
+.flow4 li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.6}
+.flow4 i{font-style:normal;flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ladder2{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.ladder2 div{display:flex;align-items:center;gap:4px;flex-wrap:wrap;background:#fff;border:1px solid #D5E1EA;border-radius:12px;padding:9px 10px;color:#0F1E2C}
+.ladder2 em{font-style:normal;font-size:11.5px;font-weight:700;color:#fff;background:var(--navy);border-radius:99px;padding:2px 8px;margin-right:4px}
+.ladder2 span{font-size:12.3px}
+.ladder2 span+span:before{content:"→ ";color:#8395A5}
+.safe{border-radius:16px;padding:15px 16px;background:#fff;border:1.5px solid var(--navy);margin:16px 0 18px;color:#0F1E2C}
+.safe b{display:flex;align-items:center;gap:6px;font-size:14.5px;color:var(--navy)}
+.safe p{margin:6px 0 0;font-size:13.5px;color:#33475A;line-height:1.6}
+.trial{text-decoration:none;display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;background:var(--navy);color:#fff;border-radius:14px;padding:12px 15px;font-size:14.5px;font-weight:700;margin:14px 0 8px}
+.trial span{font-weight:400;font-size:12.5px;color:var(--on-navy-muted)}
+.promo{font-size:12.5px;color:var(--navy) !important;font-weight:700;margin:0 0 4px !important}
+.plans{display:flex;flex-direction:column;gap:8px;margin:6px 0 10px}
+.plan{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #D5E1EA;border-radius:14px;padding:13px 15px;color:#0F1E2C}
+.plan.best{border:2px solid var(--navy)}
+.plan .l b{font-size:15px}
+.plan .l small{display:block;font-size:12px;color:#4E5D6B}
+.plan .r{text-align:right}
+.plan .r b{font-family:var(--serif);font-size:19px;color:var(--navy)}
+.tag-best{display:inline-block;font-size:10.5px;font-weight:700;background:var(--navy);color:#fff;border-radius:99px;padding:2px 7px;margin-left:6px;vertical-align:2px}
+.pnote{font-size:11.5px !important;color:var(--muted) !important;margin:0 0 14px !important;line-height:1.55}
+.more{display:block;text-align:center;font-size:13.5px;color:#fff;margin-top:14px;text-underline-offset:4px}
+
+/* experts */
+.evidence{margin:4px 0 18px;padding:15px 16px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.evidence p{margin:0;color:#fff;font-size:14px;line-height:1.65}
+.s3 .subh{color:#fff}
+.s3 .flow4 li{color:var(--on-navy)}
+.s3 .flow4 i{background:var(--sky);color:var(--navy)}
+.proto{margin:16px 0 0;padding:14px 16px;border-radius:14px;background:rgba(169,196,217,.14)}
+.proto b{display:block;color:#fff;font-size:14.5px}
+.proto span{display:block;font-size:13px;color:var(--on-navy-muted);line-height:1.6;margin-top:3px}
+.offer{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+.offer span{font-size:12.5px;padding:6px 11px;border-radius:99px;background:rgba(169,196,217,.16);color:#fff}
+.themes-t{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--sky) !important;margin:0 0 4px !important}
+.themes{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.themes a{display:flex;justify-content:space-between;align-items:center;gap:4px 10px;padding:15px 2px;border-bottom:1px solid rgba(255,255,255,.18);text-decoration:none;color:#fff;font-family:var(--serif);font-size:18px;font-weight:700}
+.themes a small{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--on-navy-muted)}
+.themes a span.tt{display:flex;flex-direction:column;gap:2px}
+.themes a em{font-style:normal;font-family:var(--sans);font-size:11.5px;font-weight:700;color:var(--sky);letter-spacing:.8px;text-transform:uppercase}
+.themes a i{font-style:normal;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--on-navy-muted);line-height:1.5}
+.collab{margin:-6px 0 18px;padding:15px 16px;border-radius:14px;border:1.5px dashed rgba(169,196,217,.6);background:rgba(169,196,217,.08)}
+.collab .badge{background:#C9B47E;color:#0B1B3A}
+.collab b{display:block;color:#fff;font-family:var(--serif);font-size:16.5px;margin-top:2px}
+.collab small{display:block;font-size:12.8px;color:var(--on-navy-muted);line-height:1.6;margin-top:4px}
+.s3 .safe{background:rgba(255,255,255,.06);border-color:rgba(169,196,217,.5);color:#fff}
+.s3 .safe b{color:#fff}.s3 .safe p{color:var(--on-navy-muted)}
+
+/* team */
+.team{padding-block:44px;background:var(--sky-soft)}
+.team h2{font-size:25px;line-height:1.35;margin:8px 0 10px}
+.team>p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+.mem{display:block;background:var(--card);border-radius:16px;padding:14px 16px;border:1px solid var(--line);margin-bottom:10px}
+.mem b{display:block;font-size:17px;font-family:var(--serif)}
+.mem .role{display:block;font-size:12px;color:var(--navy);font-weight:700;margin-bottom:6px}
+:root[data-theme="dark"] .mem .role{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mem .role{color:var(--sky)}}
+.mem ul{list-style:none;margin:6px 0 0;padding:0;font-size:12.8px;color:var(--muted);line-height:1.55;display:flex;flex-direction:column;gap:3px}
+.mem .lic{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+.mem .lic span{font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--navy);color:#fff}
+.team .note{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* vision */
+.vision{padding-block:48px;background:var(--ground)}
+.vision h2{font-size:25px;line-height:1.4;margin:8px 0 12px}
+.vision>p{margin:0 0 20px;color:var(--muted);font-size:14.5px}
+.cycle{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:22px}
+.cycle div{border-radius:14px;padding:13px 14px;background:var(--sky-soft)}
+.cycle div:nth-child(4){background:var(--navy);color:#fff}
+.cycle div:nth-child(4) small{color:var(--on-navy-muted)}
+.cycle em{font-style:normal;font-size:11px;font-weight:700;color:#2F5D9A;letter-spacing:.5px}
+.cycle div:nth-child(4) em{color:var(--sky)}
+.cycle b{display:block;font-size:14.5px;margin-top:2px;line-height:1.4}
+.cycle small{display:block;font-size:12.3px;color:var(--muted);line-height:1.5;margin-top:2px}
+.prn{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.prn li{border-left:3px solid var(--navy);padding-left:12px}
+:root[data-theme="dark"] .prn li{border-color:var(--sky)}
+.prn b{display:block;font-size:15.5px;font-family:var(--serif)}
+.prn span{display:block;font-size:13.5px;color:var(--muted);line-height:1.6;margin-top:2px}
+
+/* closing & footer */
+.close{background:var(--navy-deep);color:#fff;text-align:center;padding:60px 20px 64px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.close img{width:96px}
+.close h2{font-size:25px;font-style:italic;font-weight:400;letter-spacing:0;line-height:1.45}
+.close p{margin:0 0 6px;color:var(--on-navy-muted);font-size:14.5px}
+.close .stack{width:100%}
+footer{padding:28px 20px 36px;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.75;display:flex;flex-direction:column;align-items:center;gap:2px}
+footer .by{color:var(--navy);text-decoration:underline;text-underline-offset:3px;font-size:13px}
+:root[data-theme="dark"] footer .by{color:var(--sky)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .by{color:var(--sky)}}
+footer .links{margin:4px 0;display:flex;gap:4px 6px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+footer .links a{text-underline-offset:3px}
+footer .links .hl{font-weight:700;color:var(--ink)}
+footer .sns{display:flex;gap:10px;justify-content:center;margin:8px 0 4px}
+footer .sns a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;text-decoration:none}
+footer .sns a:hover{border-color:var(--navy);color:var(--navy)}
+footer .disc{max-width:360px;margin:8px 0 6px;font-size:11.5px;line-height:1.6}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.ssolwellnesshouse.com/#org","name":"SSOL Wellness House","alternateName":"쏠 웰니스 하우스","url":"https://www.ssolwellnesshouse.com/en/","email":"contact@ssolwellness.com","telephone":"+82-10-2835-2263","address":{"@type":"PostalAddress","streetAddress":"Room 408, 4F, 100 Dongmak-ro, Mapo-gu","addressLocality":"Seoul","addressCountry":"KR"},"sameAs":["https://www.instagram.com/ssol.wellness/","https://x.com/in_the_maas","https://www.threads.com/@ssol.wellnesshousemkt","https://www.linkedin.com/company/ssol-wellness-house/"]}</script>
+</head>
+<body>
+
+<div class="app" id="app">
+  <!-- 로그인 버튼 없음(영문 랜딩에서는 바로 로그인하지 않음). 오른쪽 위 KOR/ENG 스위치는 /lang-toggle.js가 넣어요. -->
+  <header class="top">
+    <a class="logo" href="#top"><img src="https://www.ssolwellnesshouse.com/images/mark-cream.png" alt="">SSOL Wellness House</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-mark" src="https://www.ssolwellnesshouse.com/images/mark-cream.png" alt="">
+      <div class="hero-in">
+        <span class="eyebrow">SSOL Wellness House</span>
+        <h1 id="headline">Need someone you can<br>really open up to?</h1>
+        <p class="lead">From light wellness tests to <b>Sowella AI</b>, our wellness coaching chat, to 1:1 sessions with a mental wellness trainer.<br>Start at the depth that feels right today.</p>
+        <div class="stack">
+          <a class="btn light" href="#test">Try a test designed by therapists</a>
+          <a class="btn ghost-l" href="https://app.ssolwellnesshouse.com/en?utm_source=www_en">Talk with Sowella AI</a>
+        </div>
+        <div class="sub">Curious about Sowella AI? <a href="/en/about.html">Learn more →</a></div>
+        <div class="sub" style="margin-top:-8px">Ready to work with an expert? <a href="https://www.ssolwellness.com/en/reserve">Book a session →</a></div>
+      </div>
+      <svg class="waves" viewBox="0 0 430 64" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 34 C 60 14 120 14 180 30 S 300 52 360 34 S 410 20 430 26 L430 64 L0 64 Z" fill="#A9C4D9" opacity=".35"></path>
+        <path d="M0 46 C 70 30 130 32 190 44 S 310 62 370 46 S 415 36 430 40 L430 64 L0 64 Z" fill="var(--ground)"></path>
+      </svg>
+    </section>
+
+    <!-- WHY SSOL -->
+    <section class="why pad" id="why">
+      <span class="eyebrow" style="color:var(--navy)">Why SSOL</span>
+      <h2>Closer than clinical care,<br>built for everyday life</h2>
+      <p>Somewhere between therapy and a tarot reading sit the everyday worries that never quite get solved. Bring the questions you've found hard to say out loud. Sowella AI is here to talk them through.</p>
+      <div class="cmp">
+        <div><em>Goal</em><b>Change you can feel in your own life</b><small>We don't just hand you answers. We help you build the strength to understand and work through things yourself.</small></div>
+        <div><em>For</em><b>Anyone, the moment a worry shows up</b><small>Not only when you think you need a diagnosis, but in every everyday moment that weighs on you.</small></div>
+        <div><em>How</em><b>Clear ground for your choices</b><small>We sort through what's on your mind using proven psychology, and when it helps, we take action with you.</small></div>
+        <div class="us"><em>How long</em><b>Support that continues after you graduate</b><small>Like a personal trainer at the gym, your trainer and Sowella AI stay with you, online and in person.</small></div>
+      </div>
+    </section>
+
+    <section class="ladder pad">
+      <h2>Start at the shore,<br>go as deep as you like</h2>
+      <p>Get to know yourself lightly, talk whenever you need to, and meet an expert when you want to look deeper.</p>
+      <div class="depth">
+        <a class="d1" href="#test"><span class="n">1</span><span><b>Get to know yourself</b><small>Wellness tests · about 5 min</small></span></a>
+        <a class="d2" href="#chat"><span class="n">2</span><span><b>Talk any time</b><small>Sowella AI wellness chat</small></span></a>
+        <a class="d3" href="#expert"><span class="n">3</span><span><b>Go deeper with an expert</b><small>1:1 mental wellness sessions</small></span></a>
+      </div>
+    </section>
+
+    <!-- STEP 1 -->
+    <section class="step s1 pad" id="test">
+      <span class="eyebrow">Step 1 · Get to know yourself</span>
+      <h2>Discover your wellness<br>through our tests</h2>
+      <p>Korea-certified therapists and psychologists designed and reviewed every question, type and reading, grounded in counseling psychology. Start light; your results become clues to understanding yourself.</p>
+      <div class="tests">
+        <div class="tcard">
+          <a class="img" href="https://quiz.ssolwellnesshouse.com?utm_source=www_en" aria-disabled="true"><img src="https://quiz.ssolwellnesshouse.com/images/hero/hero-intro.jpg" alt="Invited to a tea party, and it turns out you're a dessert — test cover image" style="object-position:50% 42%"></a>
+          <div class="tb"><b>Invited to a tea party… and you're actually a dessert?!</b><small>Across five areas, career, love, relationships, yourself and life direction, find out where your biggest worry sits right now and how you tend to cope, told through dessert characters.</small>
+            <div class="meta"><span>About 5 min</span><span>No sign-up</span><span>15 types</span></div>
+            <div class="report"><b>Want to know more? Your in-depth report</b><small>Why you're this type, what stands out about you compared with others, and how you can grow from here.</small></div>
+            <span class="btn off" role="link" aria-disabled="true">English version coming soon</span></div>
+        </div>
+        <div class="tcard night">
+          <a class="img" href="https://astro.ssolwellnesshouse.com/en?utm_source=www_en"><img src="https://www.ssolwellnesshouse.com/images/astro-card.jpg" alt="The twelve zodiac characters gathered on a boat under the stars — SSOL Astro House"></a>
+          <div class="tb"><b>SSOL Astro House <span class="new">NEW</span></b><small>See yourself through the sky on the day you were born. Look back on your 2026 with your birth chart, then get wellness suggestions matched to your 2027 and the year ahead.</small>
+            <div class="meta"><span>Birth chart</span><span>2026 in review</span><span>Your 2027</span></div>
+            <a class="btn gold" href="https://astro.ssolwellnesshouse.com/en?utm_source=www_en">Read my stars</a></div>
+        </div>
+        <div class="tcard night">
+          <a class="img" href="https://tarot.ssolwellnesshouse.com/en?utm_source=www_en"><img src="https://www.ssolwellnesshouse.com/images/tarot-card.jpg" alt="A sea otter friend and three cards under the moonlight — SSOL Tarot House" width="1200" height="630" loading="lazy" style="aspect-ratio:1200/630;height:auto"></a>
+          <div class="tb"><b>SSOL Tarot House <span class="new">NEW</span></b><small>Hold your question in mind and draw three cards. Our own deck of 22 cards, illustrated with sea friends, reads where you are right now and suggests small wellness steps.</small>
+            <div class="meta"><span>3 cards</span><span>Our own 22-card deck</span><span>Free to start</span></div>
+            <a class="btn gold" href="https://tarot.ssolwellnesshouse.com/en?utm_source=www_en">Start my reading</a></div>
+        </div>
+      </div>
+      <!-- 스크린샷은 한국어판 이미지 그대로예요. 영문 화면 캡처를 같은 파일명(images/shots/...-en.jpg 등)으로 받으면 src만 바꾸면 돼요. -->
+      <p class="shot-t">See the Dessert Test</p>
+      <p class="shot-hint">Swipe to see more →</p>
+      <div class="shotrow" role="region" aria-label="See the Dessert Test" tabindex="0"><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-1.jpg" alt="Dessert Test start screen" width="540" height="1034" loading="lazy"><figcaption>Start screen</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-2.jpg" alt="A question from part 1 of 33, the area check" width="540" height="914" loading="lazy"><figcaption>33 questions · Part 1: areas</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-3.jpg" alt="Screen where you choose yourself when scores tie" width="540" height="914" loading="lazy"><figcaption>Scores tie? You decide</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-4.jpg" alt="Your dessert type result" width="540" height="1034" loading="lazy"><figcaption>Your dessert type</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-5.jpg" alt="Match card showing your easy friend and your likely opposite" width="540" height="1034" loading="lazy"><figcaption>Match card</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-6.jpg" alt="Blurred preview of the in-depth report before payment" width="540" height="914" loading="lazy"><figcaption>In-depth report preview</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/dessert-7.jpg" alt="List of in-depth report sections" width="540" height="914" loading="lazy"><figcaption>In-depth report sections</figcaption></figure></div>
+      <p class="shot-t">See SSOL Tarot House</p>
+      <p class="shot-hint">Swipe to see more →</p>
+      <div class="shotrow" role="region" aria-label="See SSOL Tarot House" tabindex="0"><figure><img src="https://www.ssolwellnesshouse.com/images/shots/tarot-1.jpg" alt="SSOL Tarot House start screen" width="540" height="982" loading="lazy"><figcaption>Start screen</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/tarot-2.jpg" alt="Screen for writing your question in a line" width="540" height="996" loading="lazy"><figcaption>Write your question</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/tarot-3.jpg" alt="Three cards drawn" width="540" height="996" loading="lazy"><figcaption>Draw three cards</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/tarot-4.jpg" alt="Card reading screen" width="540" height="996" loading="lazy"><figcaption>Read your cards</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/tarot-5.jpg" alt="Continuing into the full report" width="540" height="996" loading="lazy"><figcaption>Want more? The full report</figcaption></figure></div>
+      <div class="soonlist">
+        <div class="soon"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"></path><path d="M3 17c3-4 6-4 9 0s6 4 9 0"></path></svg></div>
+          <div><span class="badge" style="background:#4E5D6B">Coming soon</span><b>Sea Friends Relationship Test</b><small>A test to discover who you are in your relationships.</small></div></div>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step s2 pad" id="chat">
+      <span class="eyebrow">Step 2 · Talk any time</span>
+      <h2>Hard to say out loud?<br>Tell Sowella first</h2>
+      <p>Sowella AI isn't a chatbot that just waits for you. A database designed and reviewed by counseling psychology experts decides which approach fits, what to ask and which small steps to suggest. The AI then puts it into natural words that fit your situation.</p>
+
+      <p class="shot-t">See Sowella AI</p>
+      <p class="shot-hint">Swipe to see more →</p>
+      <div class="shotrow" role="region" aria-label="See Sowella AI" tabindex="0"><figure><img src="https://www.ssolwellnesshouse.com/images/shots/sowella-1.jpg" alt="Sowella AI home screen with your type character and a greeting" width="540" height="914" loading="lazy"><figcaption>Home · Your type and a hello</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/sowella-2.jpg" alt="Screen suggesting today's small step" width="540" height="914" loading="lazy"><figcaption>Today's small step</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/sowella-3.jpg" alt="First chat with Sowella AI, shaped by your test results" width="540" height="914" loading="lazy"><figcaption>First chat</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/sowella-4.jpg" alt="Clarifying chat that narrows down the reasons" width="540" height="830" loading="lazy"><figcaption>Clarify · Narrow down why</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/sowella-5.jpg" alt="Commitment chat that sets this month's small step" width="540" height="818" loading="lazy"><figcaption>Commit · This month's step</figcaption></figure><figure><img src="https://www.ssolwellnesshouse.com/images/shots/sowella-6.jpg" alt="Profile screen" width="540" height="914" loading="lazy"><figcaption>Profile</figcaption></figure></div>
+      <div class="chat" aria-label="Preview of a Sowella AI chat">
+        <div class="h">AI chat<span>New chat</span></div>
+        <div class="b">
+          <div class="bub ai">Hi, I'm Sowella AI, SSOL's wellness coach. If something's been on your mind lately, I'm here to listen.</div>
+          <div class="bub me">I've been feeling drained lately, for no clear reason.</div>
+          <div class="bub ai">Thanks for telling me. When in the day does that feeling hit you the hardest?</div>
+        </div>
+        <div class="f"><div class="in">Tell Sowella what's on your mind</div><div class="rb">Suggested questions</div><div class="sb">Send</div></div>
+      </div>
+
+      <p class="subh">Why you can trust Sowella AI</p>
+      <div class="stats"><div><b>14+</b><span>psychology frameworks<br>in its knowledge base</span></div><div><b>1,166+</b><span>small-step suggestions<br>in its database</span></div><div><b>884+</b><span>questions that<br>connect the dots</span></div></div>
+      <p class="cap" style="margin-top:-8px !important">Sowella AI draws on 14+ psychology frameworks, including ACT and CBT, and every piece of content it learns from is reviewed by counseling psychology experts.</p>
+      <ol class="flow4">
+        <li><i>1</i><span>Within your first three chats, it helps you get to the heart of what's on your mind, and connects you to a wellness session if you'd like one.</span></li>
+        <li><i>2</i><span>It follows a simple path, Open up → Clarify → Reframe → Commit, and ends with one step you can take today.</span></li>
+        <li><i>3</i><span>It remembers your test results, in-depth reports, wellness profile, what you first shared, past chats and session notes, so you never have to start from scratch.</span></li>
+      </ol>
+      <p class="subh">Small steps at your own pace</p>
+      <p class="cap" style="margin:-4px 0 10px !important">You wouldn't ask a baby who's just learning to walk to run. From 1,166+ small steps, Sowella AI starts with the one that fits where you are right now.</p>
+      <div class="ladder2">
+        <div><em>Body</em><span>Stretch</span><span>Walk</span><span>Run</span><span>Group training</span></div>
+        <div><em>Feelings</em><span>One-line journal</span><span>3-minute breathing</span><span>Open up to a friend</span><span>Book a session</span></div>
+        <div><em>People</em><span>Check-in text</span><span>Quick call</span><span>Meet up</span><span>Honest talk</span></div>
+      </div>
+      <div class="safe"><b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>Safety first</b>
+        <p>Every message passes through a safety check first. If there are signs that you may need medical or clinical care, such as a threat to your safety or very deep distress, Sowella AI stops coaching and shows you crisis and support lines for your country. If using a coaching approach could reopen a wound, it won't use one.</p>
+        <p style="margin-top:10px"><b style="display:inline;font-size:13.5px">Your chats are yours</b> · Even the trainer you work with in wellness sessions can't see your Sowella AI chats without your permission.</p></div>
+
+      <a class="trial" href="https://app.ssolwellnesshouse.com/en?utm_source=www_en">New members get a free 3-day pass<span>· keep going if you like it →</span></a>
+      <p class="promo">Launch prices</p>
+      <div class="plans">
+        <div class="plan"><div class="l"><b>1 month</b></div><div class="r"><b>US$3.99</b></div></div>
+        <div class="plan best"><div class="l"><b>3 months<span class="tag-best">Most popular</span></b><small>About US$3.33 a month</small></div><div class="r"><b>US$9.99</b></div></div>
+        <div class="plan"><div class="l"><b>12 months</b><small>About US$2.08 a month</small></div><div class="r"><b>US$24.99</b></div></div>
+      </div>
+      <p class="pnote">Prices in USD. Your bank may add a foreign-transaction fee. Daily chat limit resets at midnight Korea time (KST).</p>
+      <a class="btn solid" href="https://app.ssolwellnesshouse.com/en?utm_source=www_en">Start chatting now</a>
+      <a class="more" href="/en/about.html" style="color:var(--navy)">More about Sowella AI →</a>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step s3 pad" id="expert">
+      <span class="eyebrow">Step 3 · Go deeper with an expert</span>
+      <h2 style="color:#fff">1:1 wellness sessions<br>with a mental wellness trainer</h2>
+      <p>A wellness session isn't therapy. It's training for your mind. Like working with a personal trainer, you set your own main mission over 8 sessions and experience real change. The goal: reach a fuller life with wisdom from science and philosophy.</p>
+      <div class="evidence">
+        <p>To reach the same result, the top 25% of practitioners needed 2 sessions, while the bottom 25% needed 10 (Mahon, Minami &amp; Brown, 2025). Who you work with changes how much a session helps. SSOL holds its sessions to the standard of that top 25%: we check our trainers through skills assessments and our sessions by measuring progress every time.</p>
+      </div>
+      <p class="subh">How it works</p>
+      <ol class="flow4">
+        <li><i>1</i><span><b>20-min first consultation and check-in</b> · First, we make sure the sessions are a good fit for you</span></li>
+        <li><i>2</i><span><b>Set your main mission</b> · Together, we choose 1–2 goals for the 8 sessions and how you'll know you've reached them</span></li>
+        <li><i>3</i><span><b>Weekly sessions + quests in between</b> · Sowella AI helps you keep up your small steps between sessions. A mission gauge (0–10) tracks every session, with a check-in at sessions 4 and 8</span></li>
+        <li><i>4</i><span><b>Graduate and keep it going</b> · You graduate with your own tools and a plan to stay on track. If you want, add a follow-up session 4 weeks later</span></li>
+      </ol>
+      <div class="proto"><b>Every session follows SSOL's wellness manual</b><span>Our own manual sets a main and supporting approach for each area of concern and shapes all 8 sessions. Adjustments for each person are reviewed at our weekly team roundtable. Between sessions, Sowella AI follows up on your small steps using the same approach.</span></div>
+      <div class="offer" style="margin-top:16px">
+        <span>20-min first consultation · US$8.99</span>
+        <span>Weekly recommended</span>
+        <span>Video (Google Meet)</span>
+        <span>In person · Gongdeok, Sangsu (Seoul)</span>
+        <span>Sessions in English</span>
+      </div>
+      <p class="themes-t">Session themes</p>
+      <ul class="themes">
+        <li><a href="https://www.ssolwellness.com/perfectionism"><span class="tt"><em>Career</em>Excellence over perfection<i>Turn performance anxiety and self-criticism into energy for excellence</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/romance"><span class="tt"><em>Love</em>Change your dating patterns<i>Notice the scenes that keep repeating, and say what you really feel in one sentence</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/group"><span class="tt"><em>Group</em>Group wellness sessions<i>8–10 people talking about life and people through psychology</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/happiness"><span class="tt"><em>Self</em>Train for happiness<i>Grow the good moments, and be a little kinder to yourself</i></span><small>→</small></a></li>
+        <li><a href="https://www.ssolwellness.com/purpose"><span class="tt"><em>Life</em>Find your direction<i>Discover what gives your life meaning, starting with the smallest first step</i></span><small>→</small></a></li>
+      </ul>
+      <div class="collab"><span class="badge">Coming soon</span><b>Collab sessions, stay tuned</b><small>We're preparing in-person wellness sessions in Seoul where you care for your mind by moving your body and hands, like yoga classes and make-your-own-book workshops.</small></div>
+      <div class="safe"><b>What we check first</b><p>In your first consultation, we look at how you're doing together. If you're in crisis, we'll point you to emergency and crisis services first, instead of a wellness session.</p></div>
+      <a class="btn light" href="https://www.ssolwellness.com/en/reserve">Book a session</a>
+      <a class="more" href="https://www.ssolwellness.com/wellnessintro">Curious about mental wellness sessions?</a>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team pad" id="team">
+      <span class="eyebrow" style="color:var(--navy)">Our Team</span>
+      <h2>The people behind SSOL</h2>
+      <p>Our trainers studied clinical and counseling psychology and arts therapy. They design and run everything themselves, from test questions to Sowella AI's conversations to 1:1 sessions.</p>
+      <div class="mem"><div><span class="role">CEO · Mental Wellness Trainer</span><b>Junseok Kim</b>
+        <ul><li>M.A. in Clinical &amp; Counseling Psychology, Seoul National University · B.A. in Business &amp; Psychology, Yonsei University</li><li>Now: Counselor and group facilitator, SNU Center for Campus Life and Culture (since 2020)</li><li>Now: Wellness programs for Mindaz, World Taekwondo and the Samsung Meditation Center</li><li>Before: Advisor to an AI mental care app (Soye Kids) · PM of the Maumbada app · English-language sessions at AHS</li><li>Leads: test and session design, our wellness manual, Sowella AI content review</li></ul>
+        <div class="lic"><span>Counseling Psychologist, Level 2</span><span>Youth Counselor, Level 2</span><span>Native-level English</span></div></div></div>
+      <div class="mem"><div><span class="role">Chief Strategy Officer</span><b>Hyejin Kwak</b>
+        <ul><li>B.A. in Business Administration, Yonsei University</li><li>Before: Cloud strategy team at an IaaS company (AI/IaaS strategy, revenue forecasting)</li><li>Before: Expat posting in the UAE, advising tech and healthcare startups on going global</li><li>Leads: Sowella AI content review (with Junseok Kim), business strategy, Sowella AI's interpretation engine and data, workplace wellness sessions</li></ul>
+        <div class="lic"><span>Industrial Psychology Counselor, Level 1</span><span>NHN Cloud Essentials</span><span>Native-level English</span></div></div></div>
+      <div class="mem"><div><span class="role">Expert Advisor · Mental Wellness Trainer</span><b>Semin Oh</b>
+        <ul><li>M.A. in Clinical &amp; Counseling Psychology, Seoul National University · B.A. in Psychology &amp; Aesthetics, Seoul National University</li><li>Before: Clinical training, Department of Psychiatry, Seoul National University Hospital</li><li>Leads: wellness test development and review, interpretation database and safety standards review, career wellness sessions</li></ul>
+        <div class="lic"><span>Mental Health Clinical Psychologist, Level 1</span></div></div></div>
+      <div class="mem"><div><span class="role">Expert Advisor · Mental Wellness Trainer</span><b>Yuju Oh</b>
+        <ul><li>M.A. in Integrative Arts Therapy, Dongduk Women's University</li><li>Now: Senior HR Consultant, TNF Consulting</li><li>Before: Researcher, SNU Institute of Psychological Sciences</li><li>Leads: wellness test development and review, small-step and conversation review, love and relationship wellness sessions</li></ul>
+        <div class="lic"><span>Integrative Arts Psychology Instructor, Level 1</span></div></div></div>
+      <p class="note">We also work with a wider pool of experts, including our advisory board. To protect quality, we don't rush: we grow slowly, with experts we've vetted. All certifications listed are Korean.</p>
+    </section>
+
+    <!-- VISION -->
+    <section class="vision pad" id="vision">
+      <span class="eyebrow" style="color:var(--navy)">Our Vision</span>
+      <h2>Helping more people<br>live a fuller life</h2>
+      <p>Our vision is to bring wellness support that's closer than clinical care, and rooted in everyday worries, to more people, online and in person. As a personal trainer for your mind, we want to be a long-term partner who goes beyond explaining what you feel and helps you make better choices.</p>
+      <div class="cycle">
+        <div><em>01 · Tests</em><b>Notice what you need</b><small>Start with something fun and find clues about yourself</small></div>
+        <div><em>02 · Sowella AI</em><b>Practice and check in, every day</b><small>Talk any time and find today's small step</small></div>
+        <div><em>03 · Sessions</em><b>Find a better direction</b><small>8 sessions of mind training with a trainer in your area</small></div>
+        <div><em>04 · Graduate · Maintain</em><b>Until you stand on your own</b><small>Keep it light with Sowella AI and check-ins, and come back when you need to</small></div>
+      </div>
+      <ul class="prn">
+        <li><b>The strength to solve it yourself</b><span>Instead of handing you the answer, we stay by your side while you build the strength to understand and solve things on your own.</span></li>
+        <li><b>Support that doesn't end with the last session</b><span>Like a personal trainer, we keep going after you graduate, with Sowella AI and check-ins. We're also building an SSOL alumni community for people with similar worries.</span></li>
+        <li><b>No compromise on expertise</b><span>Our trainers prove themselves through skill, our services through results. If SSOL isn't the right fit for what you're facing, we'll connect you with a better-suited service.</span></li>
+        <li><b>Come back any time</b><span>We keep the door low, so you can stop by the moment a worry shows up. With sessions in English, we're with you wherever you live.</span></li>
+      </ul>
+    </section>
+
+    <section class="close">
+      <img src="https://www.ssolwellnesshouse.com/images/mark-cream.png" alt="">
+      <h2>Beyond success and happiness,<br>meet a fuller you</h2>
+      <p>Where would you like to start today?</p>
+      <div class="stack">
+        <a class="btn light" href="#test">Try a test designed by therapists</a>
+        <a class="btn ghost-l" href="https://app.ssolwellnesshouse.com/en?utm_source=www_en">Talk with Sowella AI</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="by" href="https://www.ssolwellness.com">by SSOL Wellness House</a>
+    <div class="sns" aria-label="SSOL Wellness House on social media"><a href="https://www.instagram.com/ssol.wellness/" target="_blank" rel="me noopener noreferrer" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a><a href="https://x.com/in_the_maas" target="_blank" rel="me noopener noreferrer" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a href="https://www.threads.com/@ssol.wellnesshousemkt" target="_blank" rel="me noopener noreferrer" aria-label="Threads" title="Threads"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9.2C18.2 5.6 15.7 3.6 12 3.6 7.6 3.6 4.9 6.7 4.9 12s2.7 8.4 7.1 8.4c3.6 0 6-1.7 6-4.2 0-2.1-1.7-3.3-4.3-3.4-3-.1-4.5 1-4.4 2.5.1 1.3 1.3 2 2.7 1.9 2.3-.1 3.5-1.9 3.5-5.3 0-2.6-1.8-4-4.3-4-1.7 0-3 .6-3.8 1.8"></path></svg></a><a href="https://www.linkedin.com/company/ssol-wellness-house/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a></div>
+    <p class="disc">SSOL Wellness House offers non-clinical wellness coaching and wellness sessions. We don't provide psychotherapy, diagnosis or medical treatment. Our services are for adults 18 and over. If you're in crisis, please contact your local emergency number or find a helpline at <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a>.</p>
+    <div class="links"><a href="/en/safety.html">Safety</a><span>·</span><a href="/en/faq.html">FAQ</a><span>·</span><a href="/en/team.html">Our team</a><span>·</span><a href="/en/session.html">Wellness sessions</a><span>·</span><a href="/en/about.html">About Sowella AI</a><span>·</span><a href="/en/privacy-guide.html">Your chats and privacy</a></div>
+    <div class="links"><a href="/en/terms.html">Terms of Use</a><span>·</span><a href="/en/privacy.html">Privacy Policy</a><span>·</span><a class="hl" href="/en/consumer-health-data.html">Consumer Health Data Privacy Policy</a><span>·</span><a href="/en/cookies.html">Cookie Policy</a><span>·</span><a href="/en/refund.html">Refund Policy</a></div>
+    <div>SSOL Wellness House · Representative: Junseok Kim · Business registration no. 572-07-03549 · Mail-order business registration no. 2026-Seoul Mapo-2770</div>
+    <div>Room 408, 4F, 100 Dongmak-ro, Mapo-gu, Seoul, Republic of Korea · Contact number +82-10-2835-2263 · <a href="mailto:contact@ssolwellness.com">contact@ssolwellness.com</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  // 랜딩 질문 12개 순환(쏘웰라 영문판 결정: 기존 9 + 성장형 3)
+  var H=[
+    "Need someone you can<br>really open up to?",
+    "Carrying a worry that's<br>hard to put into words?",
+    "Stuck without<br>a solution in sight?",
+    "Feeling worn out<br>for no clear reason?",
+    "Has life been feeling<br>heavy and draining?",
+    "Lying awake some nights<br>because you feel anxious?",
+    "Anxious, and not sure<br>why?",
+    "Do your days feel scattered<br>and hard to keep up with?",
+    "Ever wonder what you're<br>really doing right now?",
+    "Ready to figure out<br>what you really want?",
+    "Want to grow into<br>your best self?",
+    "Looking for your<br>next small step?"
+  ];
+  var last=-1; try{ last=+(sessionStorage.getItem('ssol-h-en')||-1); }catch(e){}
+  var i; do{ i=Math.floor(Math.random()*H.length); }while(i===last);
+  try{ sessionStorage.setItem('ssol-h-en',i); }catch(e){}
+  document.getElementById('headline').innerHTML=H[i];
+
+})();
+</script>
+<script src="/lang-toggle.js" defer></script>
+</body></html>
