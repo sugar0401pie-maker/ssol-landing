@@ -11,20 +11,28 @@
   if (!header) return;
 
   var path = location.pathname.replace(/index\.html$/, '');
+  // /about 처럼 .html 없이 들어온 주소(rewrite)도 같은 페이지로 이어지게 .html을 붙여 계산합니다.
+  if (path !== '/' && path !== '/en' && !/\/$/.test(path) && !/\.[a-z0-9]+$/i.test(path)) path += '.html';
   var isEn = /^\/en(\/|$)/.test(path);
 
   // 영문판이 아직 없는 한국어 페이지 → 영문 대체 경로
   // (영문 정책 페이지가 생기면 privacy·terms 줄을 /en/privacy.html 등으로 바꾸세요)
   var KO_TO_EN = {
     '/login.html': '/en/',
-    '/privacy.html': '/en/',
-    '/terms.html': '/en/',
-    '/privacy-sensitive.html': '/en/'
+    '/privacy.html': '/en/privacy.html',
+    '/terms.html': '/en/terms.html',
+    '/privacy-sensitive.html': '/en/consumer-health-data.html'
   };
   // 한국어판이 없는 영문 페이지 → 한국어 대체 경로
   var EN_TO_KO = {
     '/en/consumer-health-data.html': '/privacy-sensitive.html',
-    '/en/cookies.html': '/privacy.html'
+    '/en/cookies.html': '/privacy.html',
+    '/en/refund.html': '/terms.html',
+    '/en/themes/perfectionism.html': '/session.html',
+    '/en/themes/romance.html': '/session.html',
+    '/en/themes/happiness.html': '/session.html',
+    '/en/themes/purpose.html': '/session.html',
+    '/en/themes/group.html': '/session.html'
   };
 
   function target(toEn) {
