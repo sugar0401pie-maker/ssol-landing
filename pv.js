@@ -1,4 +1,4 @@
-/* 방문 분석 — 2026-11-19 owner 요청. 페이지가 열릴 때 한 번, 퀴즈 서버(quiz.ssolwellnesshouse.com/api/pv)로 방문 기록을 보낸다.
+/* 방문 분석. 페이지가 열릴 때 한 번, 퀴즈 서버(quiz.ssolwellnesshouse.com/api/pv)로 방문 기록을 보낸다.
    개인정보 없음: 브라우저마다 무작위로 만든 방문자 id(쿠키 ssol_vid — ssolwellnesshouse.com 전체에서 공유해서 퀴즈로 넘어간 사람을 같은 사람으로 센다),
    탭마다 무작위로 만든 세션 id, 경로(?뒤는 보내지 않음), 유입 출처(utm·이전 사이트 도메인), 기기 종류만 보낸다.
    '추적 안 함(DNT/GPC)' 설정이나 관리자가 켠 '내 방문 제외'(쿠키 ssol_notrack=1)면 보내지 않는다. 규칙은 퀴즈 저장소 lib/pv.ts·lib/attribution.ts와 같다. */
