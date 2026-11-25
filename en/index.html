@@ -69,7 +69,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.3px;text-wrap
 .hero{position:relative;background:linear-gradient(180deg,#0A3D6E 0%,var(--navy) 60%,#0B4A80 100%);color:#fff;overflow:hidden}
 .hero-in{position:relative;z-index:2;padding:108px 20px 96px;display:flex;flex-direction:column;gap:18px}
 .hero .eyebrow{color:var(--sky)}
-#headline{font-size:30px;line-height:1.3;min-height:2.6em;transition:opacity .4s}
+#headline{font-size:25px;line-height:1.4;min-height:4.2em;transition:opacity .4s}
 .lead{margin:0;font-size:15px;color:var(--on-navy-muted)}
 .lead b{color:#fff;font-weight:500}
 .hero .sub{font-size:13.5px;color:var(--on-navy-muted);text-align:center}
@@ -287,7 +287,7 @@ footer .disc{max-width:360px;margin:8px 0 6px;font-size:11.5px;line-height:1.6}
       <img class="hero-mark" src="https://www.ssolwellnesshouse.com/images/mark-cream.png" alt="">
       <div class="hero-in">
         <span class="eyebrow">SSOL Wellness House</span>
-        <h1 id="headline">Need someone you can<br>really open up to?</h1>
+        <h1 id="headline">I obsess over details.<br>Don't tell me it's<br>because I'm a Virgo?</h1>
         <p class="lead">From light wellness tests to <b>Sowella AI</b>, our wellness coaching chat, to 1:1 sessions with a mental wellness trainer.<br>Start at the depth that feels right today.</p>
         <div class="stack">
           <a class="btn light" href="#test">Try a test designed by therapists</a>
@@ -516,18 +516,29 @@ footer .disc{max-width:360px;margin:8px 0 6px;font-size:11.5px;line-height:1.6}
 (function(){
   // 랜딩 질문 12개 순환(쏘웰라 영문판 결정: 기존 9 + 성장형 3)
   var H=[
-    "Need someone you can<br>really open up to?",
-    "Carrying a worry that's<br>hard to put into words?",
-    "Stuck without<br>a solution in sight?",
-    "Feeling worn out<br>for no clear reason?",
-    "Has life been feeling<br>heavy and draining?",
-    "Lying awake at night,<br>feeling anxious?",
-    "Anxious, and not sure<br>why?",
-    "Do your days feel scattered<br>and hard to keep up with?",
-    "Ever wonder what you're really<br>doing with your life?",
-    "Ready to figure out<br>what you really want?",
-    "Want to grow into<br>your best self?",
-    "Looking for your<br>next small step?"
+    "I obsess over details.<br>Don't tell me it's<br>because I'm a Virgo?",
+    "My MBTI says I'm an I,<br>but I love meeting people.<br>Am I secretly an E?",
+    "I'm a T, so I word things<br>carefully, but people<br>still seem to get hurt.",
+    "The one I'm talking to<br>hasn't texted in 3 hours.<br>Wait, or let it go?",
+    "All weekend lying down,<br>staring at my phone. Then<br>Sunday night feels empty.",
+    "Switch jobs or stay?<br>Another day just thinking,<br>then I clocked out.",
+    "In the group chat, replies<br>to me always seem slower,<br>and it kind of stings.",
+    "My bank account is empty<br>again this month. What do<br>I do about my spending?",
+    "I should be learning<br>something after work,<br>but I don't know what.",
+    "I believe in tarot<br>and Korean fortune-telling.<br>Where do I talk about that?",
+    "Are we a thing or not?<br>Who can I ask<br>besides my friends?",
+    "A birthday gift for<br>my friend... does this<br>look like I didn't try?",
+    "My zodiac reading sounds<br>just like me. Anyone want<br>to hear about it?",
+    "Nothing tastes like much<br>lately. Can your appetite<br>hit a slump too?",
+    "My fortune says I'll be<br>on the move next year.<br>So which job do I move to?",
+    "I can't say no,<br>so my plans keep<br>piling up.",
+    "Just thinking about Monday<br>sinks my mood, starting<br>Sunday evening.",
+    "I left the meeting<br>without saying a word.<br>Is it just me?",
+    "My hundredth plan that<br>lasted three days. Is my<br>willpower just weak?",
+    "I haven't dated in ages.<br>Should I be<br>in more of a hurry?",
+    "I snapped at Mom's<br>nagging again.<br>Why am I like this?",
+    "I'm a J, and when plans<br>fall through, it feels like<br>my whole day is ruined.",
+    "Once I'm home, I don't<br>want to do anything. I even<br>put off showering."
   ];
   var last=-1; try{ last=+(sessionStorage.getItem('ssol-h-en')||-1); }catch(e){}
   var i; do{ i=Math.floor(Math.random()*H.length); }while(i===last);
