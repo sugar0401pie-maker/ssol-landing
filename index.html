@@ -73,7 +73,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.4px;text-wrap
 .hero{position:relative;background:linear-gradient(180deg,#0A3D6E 0%,var(--navy) 60%,#0B4A80 100%);color:#fff;overflow:hidden}
 .hero-in{position:relative;z-index:2;padding:108px 20px 96px;display:flex;flex-direction:column;gap:18px}
 .hero .eyebrow{color:var(--sky)}
-#headline{font-size:31px;line-height:1.36;min-height:2.72em;transition:opacity .4s}
+#headline{font-size:27px;line-height:1.4;min-height:4.2em;transition:opacity .4s}
 .lead{margin:0;font-size:15px;color:var(--on-navy-muted)}
 .lead b{color:#fff;font-weight:500}
 .hero .sub{font-size:13.5px;color:var(--on-navy-muted);text-align:center}
@@ -294,7 +294,7 @@ footer .sns a:hover{border-color:var(--navy);color:var(--navy)}
       <img class="hero-mark" src="images/mark-cream.png" alt="">
       <div class="hero-in">
         <span class="eyebrow">Ssol Wellness House</span>
-        <h1 id="headline">이유 없이 '그냥'<br>힘드신가요?</h1>
+        <h1 id="headline">나 디테일에 집착하는데<br>이거 설마<br>처녀자리라서 그런 거야?</h1>
         <p class="lead">가벼운 테스트부터 AI 웰니스 상담 <b>쏘웰라</b>,<br>멘탈 웰니스 트레이너와의 1:1 세션까지.<br>지금 마음에 맞는 깊이로 시작하세요.</p>
         <div class="stack">
           <a class="btn light" href="#test">상담사가 직접 만든 웰니스 테스트 해보기</a>
@@ -517,7 +517,31 @@ footer .sns a:hover{border-color:var(--navy);color:var(--navy)}
 
 <script>
 (function(){
-  var H=["딱 터놓고 말 할<br>누군가가 필요하세요?","말하기 어려운<br>고민이 있으신가요?","해결책을 찾지 못해<br>힘드신가요?","이유 없이 '그냥'<br>힘드신가요?","삶이 버겁고<br>지치셨나요?","불안해서 잠못이루는<br>날이 있으신가요?","이유없는 불안때문에<br>힘드신가요?","정리가 안되고 정신없는<br>나날이 계속되나요?","내가 뭘 하고 있나<br>싶은 생각이 드시나요?"];
+  var H=[
+    "나 디테일에 집착하는데<br>이거 설마<br>처녀자리라서 그런 거야?",
+    "MBTI는 I인데<br>사람 만나는 게 좋아,<br>사실 난 E인 걸까?",
+    "나 T라서 조심해서<br>말하는데 사람들이<br>자꾸 상처받는 것 같아",
+    "썸 타는 사람이 카톡<br>답장을 3시간째 안 해,<br>기다려 말아?",
+    "주말에 누워서<br>폰만 보다가<br>일요일 밤에 허무해",
+    "회사 옮길까 그냥 다닐까,<br>오늘도 생각만 하다<br>퇴근했어",
+    "단톡방에서 내 말에만<br>답장이 늦는 것<br>같아서 서운해",
+    "이번 달도<br>통장이 텅 비었어,<br>소비 습관 어떡하지",
+    "퇴근하고 뭐라도<br>배워야 할 것 같은데<br>뭘 해야 할지 모르겠어",
+    "타로도 믿고<br>사주도 믿는데<br>이런 얘기 어디 가서 하지?",
+    "이거 썸 맞아?<br>친구들 말고<br>누구한테 물어보지?",
+    "친구 생일 선물,<br>이 정도면 너무<br>성의 없어 보일까?",
+    "별자리 풀이가<br>너무 나 같은데,<br>이 얘기 들어줄 사람?",
+    "요즘 뭘 먹어도<br>그냥 그래,<br>입맛도 슬럼프가 있나?",
+    "나 내년에<br>역마살 대박이라는데,<br>어디로 이직하면 될까?",
+    "거절을 못 해서<br>약속이 자꾸<br>늘어나",
+    "월요일 생각하면<br>일요일 저녁부터<br>기분이 가라앉아",
+    "회의에서<br>한마디도 못 하고<br>나왔어, 나만 이래?",
+    "작심삼일만<br>백 번째,<br>나 의지가 약한 걸까?",
+    "연애 안 한 지<br>오래됐는데,<br>조급해해야 하나?",
+    "엄마 잔소리에<br>또 욱했어,<br>나 왜 이러지",
+    "나 J인데<br>계획이 틀어지면<br>하루를 다 망친 기분이야",
+    "집에 오면<br>아무것도 하기 싫어서<br>씻는 것도 미뤄"
+  ];
   var last=-1; try{ last=+(sessionStorage.getItem('ssol-h')||-1); }catch(e){}
   var i; do{ i=Math.floor(Math.random()*H.length); }while(i===last);
   try{ sessionStorage.setItem('ssol-h',i); }catch(e){}
