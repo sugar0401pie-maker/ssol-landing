@@ -21,6 +21,18 @@
     {
       "source": "/about",
       "destination": "/about.html"
+    },
+    {
+      "source": "/postoffice",
+      "destination": "/api/postoffice"
+    },
+    {
+      "source": "/postoffice/:n(\\d+)",
+      "destination": "/api/postoffice?n=:n"
+    },
+    {
+      "source": "/postoffice-sitemap.xml",
+      "destination": "/api/postoffice?sitemap=1"
     }
   ]
 }

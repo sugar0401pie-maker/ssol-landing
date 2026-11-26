@@ -3,3 +3,4 @@ Allow: /
 Disallow: /login.html
 
 Sitemap: https://www.ssolwellnesshouse.com/sitemap.xml
+Sitemap: https://www.ssolwellnesshouse.com/postoffice-sitemap.xml
