@@ -17,8 +17,11 @@ const abs = (src) => {
     return "";
   }
 };
-// 랜딩 글에서는 이 문장을 빼요(대표님 2026-11-26). 앱에서 가져온 본문에도 들어 있어서 여기서 지워요.
-const REMOVED = /[ \t]*의료적 진단이나 심리 치료를 대신하지 않아요\.?/g;
+// 글에서는 이 두 문장을 빼요(대표님 2026-11-26). 앱 원본에서도 지웠지만, 관리자 화면에서 쓴 글에 들어 있을 수 있어 여기서도 지워요.
+const REMOVED = /[ \t]*(이 글은 자기이해를 돕는 일반 정보예요\.?|의료적 진단이나 심리 치료를 대신하지 않아요\.?)/g;
+// 문장을 지우고 빈 인용 칸이 남으면 칸째 지워요.
+const EMPTY_QUOTE = /<blockquote>\s*(<p>(\s|<br\s*\/?>)*<\/p>\s*)*<\/blockquote>/g;
+const cleanBody = (h) => h.replace(REMOVED, "").replace(EMPTY_QUOTE, "");
 const dateLabel = (key) => `${Number(String(key).slice(5, 7))}월 ${Number(String(key).slice(8, 10))}일`;
 const tagLink = (t) => `<a href="${APP}/board/tag/${encodeURIComponent(t)}">#${esc(t)}</a>`;
 
@@ -203,10 +206,9 @@ ${cover ? `<img class="cover" src="${esc(cover)}" alt="고민우체국 ${e.n}화
 <h1>${esc(e.title)}</h1>
 ${slides}
 <div class="box"><b>줄거리</b><p>${esc(e.summary)}</p></div>
-${e.html ? `<div class="body">${e.html.replace(REMOVED, "")}</div>` : '<p class="note">전체 글은 준비하고 있어요. 곧 이 자리에 올라와요.</p>'}
+${e.html ? `<div class="body">${cleanBody(e.html)}</div>` : '<p class="note">전체 글은 준비하고 있어요. 곧 이 자리에 올라와요.</p>'}
 </article>
 <p class="note">일상의 고민을 받아서 답변해드려요.</p>
-<p class="note">이 글은 자기이해를 돕는 일반 정보예요.</p>
 <section class="promo">
 <p class="head">${esc(p.sowella.headline)}</p>
 <p class="desc">${esc(p.sowella.desc)}</p>
